@@ -14,13 +14,13 @@ export default function Header() {
     ]
     
     return (
-        <Navbar isBordered>
+        <Navbar isBordered className="bg-amber-500">
             <NavbarContent justify="start">
                 <NavbarMenuToggle className="lg:hidden" />
                 <NavbarBrand> 
                     <Link href="/" color="foreground">
-                        <Image width={48} src={ logo } alt="ArMax Logo" />
-                        <p className="text-[18px] font-bold">ArMax Renovation LLC</p>
+                        {/* <Image width={48} src={ logo } alt="ArMax Logo" /> */}
+                        <p className="text-[20px] font-bold">ArMax Renovation LLC</p>
                     </Link> 
                 </NavbarBrand>
             </NavbarContent>
@@ -28,7 +28,7 @@ export default function Header() {
             <NavbarContent className="hidden lg:flex gap-8" justify="center">
                 {menuItems.map((item, index) => (
                     <NavbarItem isActive={pathname == `${item.href}` ? true : false} key={index}>
-                        <Link color="foreground" href={item.href} className="text-[18px]">
+                        <Link color="foreground" href={item.href} className="text-[20px]">
                             {item.label}
                         </Link>
                     </NavbarItem>   
@@ -37,7 +37,7 @@ export default function Header() {
 
             <NavbarContent className="hidden sm:flex" justify="end">
                 <NavbarItem >
-                    <Button className="text-[16px] font-bold" as={Link} color="warning" href="/contact" variant="solid">
+                    <Button className="text-[16px] font-bold" as={Link} color="primary" href="/contact" variant="solid">
                         Get a quote
                     </Button>
                 </NavbarItem>
