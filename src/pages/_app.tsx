@@ -6,20 +6,24 @@ import Head from 'next/head'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { NextUIProvider } from '@nextui-org/react'
 import NextNProgress from 'nextjs-progressbar'
+import { config } from '@fortawesome/fontawesome-svg-core'
+
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
  
 export default function App({ Component, pageProps }: AppProps) {  
   return (
     <>
         <SpeedInsights />
         <Head>
-            <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+            {/* <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" /> */}
             <title>ArMax Renovation LLC</title>
             <meta charSet="utf-8" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
         <NextUIProvider>
             <RootLayout>
-                <NextNProgress color="#467529" />
+                <NextNProgress color="#ffc43a" />
                 <Component {...pageProps} />
             </RootLayout>
         </NextUIProvider>
