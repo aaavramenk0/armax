@@ -1,10 +1,14 @@
-import { Button, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
+import { Button, Link, LinkIcon, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import logo from "../icons/logo.png"
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faBars, faMessage, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 export default function Header() {
     const pathname = usePathname();
+    const [isOpen, setIsOpen] = useState(false)
 
     const menuItems = [
         { label: "Home", href: "/" },
@@ -14,42 +18,20 @@ export default function Header() {
     ]
     
     return (
-        <Navbar isBordered className="bg-amber-500">
-            <NavbarContent justify="start">
-                <NavbarMenuToggle className="lg:hidden" />
-                <NavbarBrand> 
-                    <Link href="/" color="foreground">
-                        {/* <Image width={48} src={ logo } alt="ArMax Logo" /> */}
-                        <p className="text-[20px] font-bold">ArMax Renovation LLC</p>
-                    </Link> 
-                </NavbarBrand>
-            </NavbarContent>
-
-            <NavbarContent className="hidden lg:flex gap-8" justify="center">
-                {menuItems.map((item, index) => (
-                    <NavbarItem isActive={pathname == `${item.href}` ? true : false} key={index}>
-                        <Link color="foreground" href={item.href} className="text-[20px]">
-                            {item.label}
-                        </Link>
-                    </NavbarItem>   
-                ))}
-            </NavbarContent>
-
-            <NavbarContent className="hidden sm:flex" justify="end">
-                <NavbarItem >
-                    <Button className="text-[16px] font-bold" as={Link} color="primary" href="/contact" variant="solid">
-                        Get a quote
-                    </Button>
-                </NavbarItem>
-            </NavbarContent>
-            
-            <NavbarMenu>
-                {menuItems.map((item, index) => (
-                    <NavbarMenuItem isActive={pathname == `${item.href}` ? true : false} key={index}>
-                        <Link className="w-full" color="foreground" size="lg">{item.label}</Link>
-                    </NavbarMenuItem>    
-                ))}
-            </NavbarMenu>
-        </Navbar>
+        <div>
+            <div className="flex flex-col lg:flex-row justify-center items-center pt-10 lg:py-10 lg:gap-44  bg-amber-500" >
+                <div>
+                    <p className="text-center text-[32px] sm:text-[48px] md:text-[60px] lg:text-[48px] font-black">ArMax Renovation LLC</p>
+                </div>
+                <div className="flex flex-col text-center">
+                    <p className="font-bold text-[28px]">Text Only</p>
+                    <Button as={Link} href="tel:+14044165745" startContent={ <FontAwesomeIcon icon={faMessage} />} variant="light" className="text-[24px] sm:text-[30px] mb-5">404-416-5745</Button>
+                    <Button className="bg-black text-white font-bold text-[20px]" endContent={<FontAwesomeIcon icon={faArrowRight} />} radius="none"  > Get A Quote</Button>
+                </div>
+                <div className="scale-[2.5] my-5 lg:hidden">
+                    <Button variant="light" onPress={() => setIsOpen(!isOpen)}>{ isOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars}/> }</Button>
+                </div>
+            </div>
+        </div>
     );
 } 
