@@ -1,37 +1,55 @@
-import { Button, Link, LinkIcon, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
-import logo from "../icons/logo.png"
-import Image from "next/image";
+import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faBars, faMessage, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+
+// import Image from "next/image";
+// import logo from "../icons/logo.png"
 
 export default function Header() {
     const pathname = usePathname();
-    const [isOpen, setIsOpen] = useState(false)
 
     const menuItems = [
         { label: "Home", href: "/" },
-        { label: "About us", href: "/about" },
-        { label: "Services", href: "/services" },
-        { label: "Contact us", href: "/contact" },
+        { label: "About us", href: "#about" },
+        { label: "Shed catalog", href: "#sheds" },
+        { label: "Contact us", href: "#contact" }
     ]
     
     return (
-        <div>
-            <div className="flex flex-col lg:flex-row justify-center items-center pt-10 lg:py-10 lg:gap-44  bg-amber-500" >
-                <div>
-                    <p className="text-center text-[32px] sm:text-[48px] md:text-[60px] lg:text-[48px] font-black">ArMax Renovation LLC</p>
-                </div>
-                <div className="flex flex-col text-center">
-                    <p className="font-bold text-[28px]">Text Only</p>
-                    <Button as={Link} href="tel:+14044165745" startContent={ <FontAwesomeIcon icon={faMessage} />} variant="light" className="text-[24px] sm:text-[30px] mb-5">404-416-5745</Button>
-                    <Button className="bg-black text-white font-bold text-[20px]" endContent={<FontAwesomeIcon icon={faArrowRight} />} radius="none"  > Get A Quote</Button>
-                </div>
-                <div className="scale-[2.5] my-5 lg:hidden">
-                    <Button variant="light" onPress={() => setIsOpen(!isOpen)}>{ isOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars}/> }</Button>
-                </div>
-            </div>
-        </div>
-    );
+        <Navbar isBordered>
+            <NavbarContent className="md:hidden" justify="start">
+                <NavbarMenuToggle />
+            </NavbarContent>
+            <NavbarContent className="md:hidden" justify="center">
+                <NavbarBrand>
+                    {/* <Image src={logo} width={48} alt="Logo of the company"></Image> */}
+                    <Link href="/" color="foreground"><span className="font-bold text-[18px] pl-3 uppercase">Shed Construction</span></Link>
+                </NavbarBrand>
+            </NavbarContent>
+
+            <NavbarContent className="hidden md:flex gap-8" justify="center">
+                <NavbarBrand>
+                    {/* <Image src={logo} width={48} alt="Logo of the company"></Image> */}
+                    <Link href="/" color="foreground"><span className="font-bold text-xl pl-3 uppercase">Shed Construction</span></Link>
+                </NavbarBrand>
+            </NavbarContent>
+
+            <NavbarContent className="hidden md:flex gap-8" justify="end">
+                {menuItems.map((item, index) => (
+                    <NavbarItem isActive={pathname == `${item.href}` ? true : false} key={index}>
+                        <Link color="foreground" href={item.href} className="text-[18px]">
+                            {item.label}
+                        </Link>
+                    </NavbarItem>
+                ))}
+            </NavbarContent>
+
+            <NavbarMenu>
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem key={`${item}-${index}`}>
+                        <Link className="w-full" color="foreground" href={item.href} size="lg">{item.label}</Link>
+                    </NavbarMenuItem>
+                ))}
+            </NavbarMenu>
+        </Navbar>
+    )
 } 
