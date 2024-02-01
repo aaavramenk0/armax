@@ -157,7 +157,7 @@ export default function Home() {
                     <div>
                         <FontAwesomeIcon icon={faComments} className="fa-3x" />
                         <h4 className="text-[20px] font-black">Text Us</h4>
-                        <Link href="tel:4044165745" showAnchorIcon isBlock>404 416 5745</Link>
+                        <Link href="sms:+14044165745" showAnchorIcon isBlock>404 416 5745</Link>
                     </div>
                     <div>
 
