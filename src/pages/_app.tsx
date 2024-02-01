@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <NextUIProvider>
             <RootLayout>
                 <NextNProgress color="#ffc43a" />
-                <Component {...pageProps} />
+                <Component {...pageProps}/>
             </RootLayout>
         </NextUIProvider>
     </>

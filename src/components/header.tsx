@@ -8,7 +8,7 @@ export default function Header() {
     const pathname = usePathname();
 
     const menuItems = [
-        { label: "Home", href: "/" },
+        { label: "Home", href: "#home" },
         { label: "About us", href: "#about" },
         { label: "Shed catalog", href: "#sheds" },
         { label: "Contact us", href: "#contact" }
@@ -22,14 +22,14 @@ export default function Header() {
             <NavbarContent className="md:hidden" justify="center">
                 <NavbarBrand>
                     {/* <Image src={logo} width={48} alt="Logo of the company"></Image> */}
-                    <Link href="/" color="foreground"><span className="font-bold text-[18px] pl-3">ArMax Renovation</span></Link>
+                    <Link href="#home" color="foreground"><span className="font-bold text-[18px] pl-3">ArMax Renovation</span></Link>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-8" justify="center">
                 <NavbarBrand>
                     {/* <Image src={logo} width={48} alt="Logo of the company"></Image> */}
-                    <Link href="/" color="foreground"><span className="font-bold text-xl pl-3">ArMax Renovation</span></Link>
+                    <Link href="#home" color="foreground"><span className="font-bold text-xl pl-3">ArMax Renovation</span></Link>
                 </NavbarBrand>
             </NavbarContent>
 
