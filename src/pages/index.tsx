@@ -5,6 +5,8 @@ import small from "../images/shedCatalog/small.png"
 import medium from "../images/shedCatalog/medium.png"
 import large from "../images/shedCatalog/large.png"
 import xlarge from "../images/shedCatalog/xlarge.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function Home() {
     const shedCatalog = [
@@ -91,7 +93,7 @@ export default function Home() {
                     <p className="text-[24px] font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto suscipit corporis itaque ex quod expedita corrupti cumque fugit voluptatibus voluptatum similique, debitis pariatur ea odit! Sed natus vitae veritatis est. <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis quasi hic voluptas ipsum illum expedita dolores rem quibusdam esse dicta ea reprehenderit sint est ipsam eligendi architecto alias, animi assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quas architecto facilis consequuntur nobis sed rem dolores non adipisci incidunt placeat, minus velit soluta accusamus numquam, magni mollitia alias ea?</p>
                 </div>
                 <div className="max-w-[45%]">
-                    <NextImage src="https://rb.gy/4h7dl9" alt="Picture for About Us section" width={600} height={600}/>
+                    <NextImage src={about} alt="Picture for About Us section" width={600} height={600}/>
                 </div>
             </div>
             
@@ -143,10 +145,21 @@ export default function Home() {
                             className="text-left mt-5"
                             size="lg"
                         />
+                        <Button as={Link} type="submit" className="mt-5" color="primary" variant="solid">Send message</Button>
                     </form>
                 </div>
-                <div className="col-span-1">
-                    Hello
+                <div className="col-span-1 grid grid-rows-3 align-middle m-auto text-center">
+                    <div>
+                        <FontAwesomeIcon icon={faEnvelope} className="fa-5x" />
+                        <h4>Email Us</h4>
+                        <Link href="mailto:armaxrenovation@gmail.com" showAnchorIcon>armaxrenovation@gmail.com</Link>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
                 </div>
             </div>
         </div>   
