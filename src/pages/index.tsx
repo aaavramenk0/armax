@@ -6,7 +6,7 @@ import medium from "../images/shedCatalog/medium.png"
 import large from "../images/shedCatalog/large.png"
 import xlarge from "../images/shedCatalog/xlarge.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faComments, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function Home() {
     const shedCatalog = [
@@ -148,14 +148,16 @@ export default function Home() {
                         <Button as={Link} type="submit" className="mt-5" color="primary" variant="solid">Send message</Button>
                     </form>
                 </div>
-                <div className="col-span-1 grid grid-rows-3 align-middle m-auto text-center">
+                <div className="col-span-1 grid grid-rows-3 gap-5 align-middle m-auto text-center">
                     <div>
-                        <FontAwesomeIcon icon={faEnvelope} className="fa-5x" />
-                        <h4>Email Us</h4>
-                        <Link href="mailto:armaxrenovation@gmail.com" showAnchorIcon>armaxrenovation@gmail.com</Link>
+                        <FontAwesomeIcon icon={faEnvelope} className="fa-3x" />
+                        <h4 className="text-[20px] font-black">Email Us</h4>
+                        <Link href="mailto:armaxrenovation@gmail.com" showAnchorIcon isBlock>armaxrenovation@gmail.com</Link>
                     </div>
                     <div>
-
+                        <FontAwesomeIcon icon={faComments} className="fa-3x" />
+                        <h4 className="text-[20px] font-black">Text Us</h4>
+                        <Link href="tel:4044165745" showAnchorIcon isBlock>404 416 5745</Link>
                     </div>
                     <div>
 
