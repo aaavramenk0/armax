@@ -21,7 +21,7 @@ module.exports = {
       },
       colors: {
         accent: "#f94c25",
-      },
+      }
     }
   },
   darkMode: "class",

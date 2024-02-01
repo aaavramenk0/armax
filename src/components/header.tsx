@@ -15,21 +15,21 @@ export default function Header() {
     ]
     
     return (
-        <Navbar isBordered>
+        <Navbar isBordered position="sticky">
             <NavbarContent className="md:hidden" justify="start">
                 <NavbarMenuToggle />
             </NavbarContent>
             <NavbarContent className="md:hidden" justify="center">
                 <NavbarBrand>
                     {/* <Image src={logo} width={48} alt="Logo of the company"></Image> */}
-                    <Link href="/" color="foreground"><span className="font-bold text-[18px] pl-3 uppercase">Shed Construction</span></Link>
+                    <Link href="/" color="foreground"><span className="font-bold text-[18px] pl-3">ArMax Renovation</span></Link>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-8" justify="center">
                 <NavbarBrand>
                     {/* <Image src={logo} width={48} alt="Logo of the company"></Image> */}
-                    <Link href="/" color="foreground"><span className="font-bold text-xl pl-3 uppercase">Shed Construction</span></Link>
+                    <Link href="/" color="foreground"><span className="font-bold text-xl pl-3">ArMax Renovation</span></Link>
                 </NavbarBrand>
             </NavbarContent>
 
