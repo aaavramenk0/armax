@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
         <NextUIProvider>
-            <RootLayout>
+            <RootLayout >
                 <NextNProgress color="#ffc43a" />
                 <Component {...pageProps}/>
             </RootLayout>

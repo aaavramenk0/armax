@@ -20,7 +20,7 @@ module.exports = {
         padding: "15px"
       },
       colors: {
-        accent: "#f94c25",
+        'black-rgba': 'rgba(0, 0, 0, 0.6)',
       }
     }
   },
