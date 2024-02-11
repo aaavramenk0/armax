@@ -110,11 +110,11 @@ export default function Home() {
     return (
         <div>
             {/* HERO section */}
-            <section className="bg-white">
+            <section className="bg-white" id="home">
                 <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12">
                     <div className="mr-auto place-self-center lg:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl">Amazing sheds for your backyard</h1>
-                        <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">Transforming Your Backyard Dreams into Reality: Custom-Crafted Sheds Built with Precision and Care</p>
+                        <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-xl lg:text-2xl">Transforming Your Backyard Dreams into Reality: Custom-Crafted Sheds Built with Precision and Care</p>
                         <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</a>
                     </div>   
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
@@ -124,16 +124,7 @@ export default function Home() {
             </section>
 
             {/* ABOUT section */}
-            {/* <div className="flex flex-row justify-around align-middle p-8 pt-12" id="about">
-                <div className="max-w-[45%] ">
-                    <h3 className="text-center font-black text-[45px] mb-8">About Us</h3>
-                    <p className="text-[24px] font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto suscipit corporis itaque ex quod expedita corrupti cumque fugit voluptatibus voluptatum similique, debitis pariatur ea odit! Sed natus vitae veritatis est. <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis quasi hic voluptas ipsum illum expedita dolores rem quibusdam esse dicta ea reprehenderit sint est ipsam eligendi architecto alias, animi assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quas architecto facilis consequuntur nobis sed rem dolores non adipisci incidunt placeat, minus velit soluta accusamus numquam, magni mollitia alias ea?</p>
-                </div>
-                <div className="max-w-[45%]">
-                    <NextImage src={about} alt="Picture for About Us section" width={600} height={600}/>
-                </div>
-            </div> */}
-            <section className="bg-white">
+            <section className="bg-white" id="about">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <div className="max-w-screen-lg mb-8 lg:mb-16">
                         <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-gray-900">ArMax Renovation - Your Partner in Expanding Your Living Space</h2>
@@ -168,25 +159,107 @@ export default function Home() {
 
 
             {/* SHED CATALOG section */}
-            <div className="p-8 grid gap-12 sm:grid-cols-2 lg:grid-cols-3 justify-items-center align-middle" id="sheds">
-                {shedCatalog.map((shed, index) => (
-                    <Card className="border-none"  key={index}>
-                        <NextImage className="object-cover" src={shed.image} width={5000} height={5000} alt="Card Image" />
-                        <CardBody>
-                            <h6 className="font-bold">{shed.size}</h6>
-                            <p className="italic">{shed.sizeDescription}</p>
-                            <p className="my-3">{shed.description}</p>
-                            <p>Popular {shed.size} sheds sizes</p>
-                            <ul className="list-disc pl-8">
-                                {shed.sizes.map((size, index) => (
-                                    <li key={index}>{size}</li>
-                                ))}
+            <section className="bg-white" id="sheds">
+                <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+                    <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Discover the Perfect Shed for Your Space</h2>
+                        <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Find the Ideal Shed Solution to Match Your Lifestyle and Storage Needs</p>
+                    </div>
+                    <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+                        <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                            <h3 className="mb-4 text-2xl font-semibold">Compact Classic (6 ft x 8 ft)</h3>
+                            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for smaller spaces</p>
+                            <div className="flex justify-center items-baseline my-8">
+                                <span className="mr-2 text-5xl font-extrabold">$29</span>
+                            </div>
+                            <ul role="list" className="mb-8 space-y-4 text-left">
+                                <li className="flex items-center space-x-3">
+                                   
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Sturdy construction with weather-resistant materials.</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Customizable shelving and storage options.</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Elegant design that complements any backyard.</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Ideal for small families and urban homes</span>
+                                </li>
                             </ul>
-                            <Button as={Link} color="primary" className="m-5">Buy This Shed</Button>
-                        </CardBody>
-                    </Card>  
-                ))}
-            </div>
+                            <a href="#" className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
+                        </div>
+                        
+                        <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                            <h3 className="mb-4 text-2xl font-semibold">Urban Organizer (6 ft x 10 ft)</h3>
+                            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">A Blend of Space and Functionality</p>
+                            <div className="flex justify-center items-baseline my-8">
+                                <span className="mr-2 text-5xl font-extrabold">$99</span>
+                            </div>
+                            
+                            <ul role="list" className="mb-8 space-y-4 text-left">
+                                <li className="flex items-center space-x-3">
+                                    
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Enhanced interior space for versatile storage.</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Optional window for natural light and ventilation.</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Robust construction with a focus on aesthetic appeal.</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Ideal for growing families</span>
+                                </li>
+                            </ul>
+                            <a href="#" className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
+                        </div>
+                        <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                            <h3 className="mb-4 text-2xl font-semibold">Garden Haven (8 ft x 10 ft)</h3>
+                            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Spacious and Versatile</p>
+                            <div className="flex justify-center items-baseline my-8">
+                                <span className="mr-2 text-5xl font-extrabold">$499</span>
+                            </div>
+                            <ul role="list" className="mb-8 space-y-4 text-left">
+                                <li className="flex items-center space-x-3">
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Spacious interior, suitable for a wide range of uses.</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                  
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Customizable layout to suit various hobbies and storage needs.</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Durable and stylish design.</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Ideal for anyone needing a large, versatile outdoor space</span>
+                                </li>
+                            </ul>
+                            <a href="#" className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            
 
             {/* CONTACT section */}
             <div className="grid grid-cols-4 gap-5" id="contact">
