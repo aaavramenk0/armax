@@ -9,6 +9,7 @@ import heroImage from "../images/heroSection/hero1.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faDollarSign, faHouseCircleCheck, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
     const shedCatalog = [
@@ -123,7 +124,7 @@ export default function Home() {
             </section>
 
             {/* ABOUT section */}
-            <div className="flex flex-row justify-around align-middle p-8 pt-12" id="about">
+            {/* <div className="flex flex-row justify-around align-middle p-8 pt-12" id="about">
                 <div className="max-w-[45%] ">
                     <h3 className="text-center font-black text-[45px] mb-8">About Us</h3>
                     <p className="text-[24px] font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto suscipit corporis itaque ex quod expedita corrupti cumque fugit voluptatibus voluptatum similique, debitis pariatur ea odit! Sed natus vitae veritatis est. <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis quasi hic voluptas ipsum illum expedita dolores rem quibusdam esse dicta ea reprehenderit sint est ipsam eligendi architecto alias, animi assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quas architecto facilis consequuntur nobis sed rem dolores non adipisci incidunt placeat, minus velit soluta accusamus numquam, magni mollitia alias ea?</p>
@@ -131,8 +132,41 @@ export default function Home() {
                 <div className="max-w-[45%]">
                     <NextImage src={about} alt="Picture for About Us section" width={600} height={600}/>
                 </div>
-            </div>
-            
+            </div> */}
+            <section className="bg-white">
+                <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                    <div className="max-w-screen-lg mb-8 lg:mb-16">
+                        <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-gray-900">ArMax Renovation - Your Partner in Expanding Your Living Space</h2>
+                        <p className="text-gray-500 sm:text-2xl">Here at ArMax Renovation, we understand that your home is more than just a place to live; it's where life happens. That's why we're dedicated to creating extra space in your home with our beautifully designed and expertly crafted sheds. Our mission is to bring joy and functionality to your backyard, enhancing your living experience.</p>
+                    </div>
+                    <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                        <div>
+                            <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-20 lg:w-20">
+                                <FontAwesomeIcon icon={faHouseCircleCheck} className="fa-2x" />    
+                            </div>
+                            <h3 className="mb-2 text-xl font-bold">Crafting Your Ideal Outdoor Spaces</h3>
+                            <p className="text-gray-500">Our sheds are more than just structures; they are extensions of your home. We ensure that each shed is not only practical but also aesthetically pleasing, adding charm and character to your property. We believe in making spaces that are as beautiful as they are useful, spaces that bring joy to your everyday life.</p>
+                        </div>
+                        <div >
+                            <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-20 lg:w-20">
+                                <FontAwesomeIcon icon={faDollarSign} className="fa-2x" />    
+                            </div>
+                            <h3 className="mb-2 text-xl font-bold">Committed to Quality and Affordability</h3>
+                            <p className="text-gray-500">Understanding the value of your hard-earned money, we provide comprehensive services that include not only the construction of your new shed but also ongoing maintenance and the flexibility of moving your shed within your backyard. This approach ensures that your investment continues to meet your needs over time, without extra hassle or expense.</p>
+                        </div>
+                        <div>
+                            <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-20 lg:w-20">
+                                <FontAwesomeIcon icon={faUsers} className="fa-2x" />    
+                            </div>
+                            <h3 className="mb-2 text-xl font-bold">Customer Service at Its Best</h3>
+                            <p className="text-gray-500">At ArMax Renovation, exceptional customer service is not just a promise; it's our standard. We are committed to providing you with support whenever you need it, 24/7. Our team is always ready to assist, ensuring that your experience with us is as seamless and satisfying as the quality of our sheds.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+
             {/* SHED CATALOG section */}
             <div className="p-8 grid gap-12 sm:grid-cols-2 lg:grid-cols-3 justify-items-center align-middle" id="sheds">
                 {shedCatalog.map((shed, index) => (
