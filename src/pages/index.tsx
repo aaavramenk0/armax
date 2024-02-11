@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Input, Link, Textarea } from "@nextui-org/react";
+import { Button, Card, CardBody, Checkbox, Input, Link, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Textarea, useDisclosure } from "@nextui-org/react";
 import NextImage from "next/image";
 import about from "../images/about.png"
 import small from "../images/shedCatalog/small.png"
@@ -12,6 +12,8 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faDollarSign, faHouseCircleCheck, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    
     const shedCatalog = [
         {
             size: "Small",
@@ -115,12 +117,53 @@ export default function Home() {
                     <div className="mr-auto place-self-center lg:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl">Amazing sheds for your backyard</h1>
                         <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-xl lg:text-2xl">Transforming Your Backyard Dreams into Reality: Custom-Crafted Sheds Built with Precision and Care</p>
-                        <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</a>
+                        <Button as={Link} onPress={onOpen} href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button>
                     </div>   
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                         <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
                     </div>
                 </div>
+
+                {/* Modal window */}
+                <Modal 
+                    isOpen={isOpen} 
+                    onOpenChange={onOpenChange}
+                    placement="top-center"
+                >
+                    <ModalContent>
+                    {(onClose) => (
+                        <>
+                        <ModalHeader className="flex flex-col gap-1">Send Message</ModalHeader>
+                        <ModalBody>
+                            <Input
+                                autoFocus
+                                label="Full Name"
+                                placeholder="Enter your name"
+                                variant="bordered"
+                            />
+                            <Input
+                                label="Email"
+                                placeholder="Enter your email"
+                                variant="bordered"
+                            />
+                            <Textarea
+                                label="Your message"
+                                placeholder="Leave a comment..."
+                                rows={6}
+                                variant="bordered"
+                            />
+                                    
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button className="text-white rounded-lg m-auto bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300" onPress={onClose}>
+                            Send Message
+                            </Button>
+                        </ModalFooter>
+                        </>
+                    )}
+                    </ModalContent>
+                </Modal>
+
             </section>
 
             {/* ABOUT section */}
