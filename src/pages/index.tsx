@@ -88,16 +88,16 @@ export default function Home() {
 
     const socialLinks = [
         {
-            href: "mailto:armaxrenovation@gmail.com",
-            icon: faEnvelope,
-            heading: "Email Us",
-            description: "armaxrenovation@gmail.com"
-        },
-        {
             href: "sms:+14044165745",
             icon: faComments,
             heading: "Text Us",
             description: "404 416 5745"
+        },
+        {
+            href: "mailto:armaxrenovation@gmail.com",
+            icon: faEnvelope,
+            heading: "Email Us",
+            description: "armaxrenovation@gmail.com"
         },
         {
             href: "https://wa.me/14044165745",
@@ -118,7 +118,7 @@ export default function Home() {
                         <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</a>
                     </div>   
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                        <NextImage src={heroImage} alt="Shed image"/>
+                        <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
                     </div>
                 </div>
             </section>
@@ -128,8 +128,8 @@ export default function Home() {
             <section className="bg-white" id="about">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <div className="max-w-screen-lg mb-8 lg:mb-16">
-                        <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-gray-900">ArMax Renovation - Your Partner in Expanding Your Living Space</h2>
-                        <p className="text-gray-500 sm:text-2xl">Here at ArMax Renovation, we understand that your home is more than just a place to live; it's where life happens. That's why we're dedicated to creating extra space in your home with our beautifully designed and expertly crafted sheds. Our mission is to bring joy and functionality to your backyard, enhancing your living experience.</p>
+                        <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 xl:text-5xl">ArMax Renovation - Your Partner in Expanding Your Living Space</h2>
+                        <p className="text-gray-500 sm:text-xl lg:text-2xl">Here at ArMax Renovation, we understand that your home is more than just a place to live; it's where life happens. That's why we're dedicated to creating extra space in your home with our beautifully designed and expertly crafted sheds. Our mission is to bring joy and functionality to your backyard, enhancing your living experience.</p>
                     </div>
                     <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                         <div>
@@ -168,6 +168,7 @@ export default function Home() {
                     </div>
                     <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                         <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                            <NextImage src={small} alt="Small shed" className="mb-4 rounded-lg"/>
                             <h3 className="mb-4 text-2xl font-semibold">Compact Classic (6 ft x 8 ft)</h3>
                             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for smaller spaces</p>
                             <div className="flex justify-center items-baseline my-8">
@@ -199,6 +200,7 @@ export default function Home() {
                         </div>
                         
                         <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                            <NextImage src={medium} alt="Small shed" className="mb-4 rounded-lg"/>
                             <h3 className="mb-4 text-2xl font-semibold">Urban Organizer (6 ft x 10 ft)</h3>
                             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">A Blend of Space and Functionality</p>
                             <div className="flex justify-center items-baseline my-8">
@@ -230,6 +232,7 @@ export default function Home() {
                             <a href="#" className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
                         </div>
                         <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                            <NextImage src={large} alt="Small shed" className="mb-4 rounded-lg"/>
                             <h3 className="mb-4 text-2xl font-semibold">Garden Haven (8 ft x 10 ft)</h3>
                             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Spacious and Versatile</p>
                             <div className="flex justify-center items-baseline my-8">
@@ -263,37 +266,28 @@ export default function Home() {
             
 
             {/* CONTACT section */}
-            <div className="grid grid-cols-4 gap-5" id="contact">
-                <div className="col-span-3 text-center">
-                    <h3 className="text-[35px]">Contact Us</h3>
-                    <p className="italic text-[20px]">Leave your contact information and message here and we will reach you back within next 24 hours!</p>
-                    <form action="submit" className="p-8 px-20">
-                        <div className="grid grid-cols-2 gap-x-16 gap-5">
-                            {inputs.map((input, index) => (
-                                <Input
-                                    key = { index }
-                                    type = { input.type }
-                                    placeholder = { input.placeholder }
-                                    label = { input.label }
-                                    labelPlacement="outside"
-                                    variant="bordered"
-                                    size="lg"
-                                    isRequired={ input.required }
-                                />  
-                            ))}
+            <section className="bg-white" id="contact">
+                <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-lg">
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
+                    {/* <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p> */}
+                    <form action="#" className="space-y-8">
+                        <div>
+                            <label className="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                            <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
                         </div>
-                        <Textarea
-                            variant="bordered"
-                            placeholder="Write your message"
-                            label="Message"
-                            labelPlacement="outside"
-                            className="text-left mt-5"
-                            size="lg"
-                        />
-                        <Button as={Link} type="submit" className="mt-5" color="primary" variant="solid">Send message</Button>
+                        <div>
+                            <label className="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                            <input type="text" id="subject" className="block p-3 w-full text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required />
+                        </div>
+                        <div className="sm:col-span-2">
+                            <label className="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                            <textarea id="message" rows={6} className="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                        </div>
+                        <button type="submit" className="block py-3 px-5 text-md font-medium text-center text-white rounded-lg bg-primary-700 m-auto hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 ">Send message</button>
                     </form>
                 </div>
-                <div className="col-span-1 grid grid-rows-3 gap-10 align-middle m-auto text-center">
+
+                <div className="max-w-screen-lg flex justify-around align-middle m-auto mb-4 text-center">
                     {socialLinks.map((link, index) => (
                         <div key={index}>
                             <a href={link.href}><FontAwesomeIcon icon={link.icon} className="fa-3x" /></a>
@@ -302,7 +296,7 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
         </div>   
     )
 }
