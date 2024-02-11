@@ -5,6 +5,7 @@ import small from "../images/shedCatalog/small.png"
 import medium from "../images/shedCatalog/medium.png"
 import large from "../images/shedCatalog/large.png"
 import xlarge from "../images/shedCatalog/xlarge.png"
+import heroImage from "../images/heroSection/hero1.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -108,53 +109,18 @@ export default function Home() {
     return (
         <div>
             {/* HERO section */}
-            <div className="bg-[url('../images/hero.png')] bg-cover bg-center h-[90vh]" id="home">
-                <div className="absolute top-[30vh] left-0 bg-black-rgba p-2 w-[45vw]">
-                    <form action="submit" className="py-2 px-10">
-                        <div className="flex flex-col">
-                            <h2 className="text-white text-[50px] text-center font-[600] mb-5">Get your <span className="uppercase underline">free</span> estimate today!</h2>
-                            <div className="flex justify-center gap-8 mb-5">
-                                <Input
-                                    type="text"
-                                    name="firstName"
-                                    size='lg'
-                                    isRequired
-                                    label="Full name"
-                                    className="text-white"
-                                    placeholder="Enter your first and last name"
-                                />
-                                <Input
-                                    type="tel"
-                                    name="phone"
-                                    size='lg'
-                                    isRequired
-                                    label="Phone number"
-                                    placeholder="Enter your phone number"
-                                />
-                            </div>
-                            <Textarea
-                                label="Message"
-                                placeholder="Enter your message"
-                                className="mb-3"
-                                size="lg"
-                            />
-                            <Button
-                                type="submit"
-                                className="m-auto"
-                                color="primary"
-                                variant="solid"
-                                size="lg"
-                            >
-                                Get Free Estimate
-                            </Button>
-                        </div>
-                    </form>
+            <section className="bg-white">
+                <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                    <div className="mr-auto place-self-center lg:col-span-7">
+                        <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl">Amazing sheds for your backyard</h1>
+                        <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">Transforming Your Backyard Dreams into Reality: Custom-Crafted Sheds Built with Precision and Care</p>
+                        <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</a>
+                    </div>   
+                    <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                        <NextImage src={heroImage} alt="Shed image"/>
+                    </div>
                 </div>
-                <div className="text-right pt-[5vh] pr-[150px]">
-                    <h1 className="z-10 text-black text-[60px] font-bold">Amazing sheds <br />for your backyard!</h1>
-                    {/* <p className="z-10 text-white text-[24px] italic">New life for your space</p> */}
-                </div>
-            </div>
+            </section>
 
             {/* ABOUT section */}
             <div className="flex flex-row justify-around align-middle p-8 pt-12" id="about">
@@ -168,10 +134,10 @@ export default function Home() {
             </div>
             
             {/* SHED CATALOG section */}
-            <div className="p-8 grid grid-cols-4 gap-12 justify-items-center place-content-around" id="sheds">
+            <div className="p-8 grid gap-12 sm:grid-cols-2 lg:grid-cols-3 justify-items-center align-middle" id="sheds">
                 {shedCatalog.map((shed, index) => (
-                    <Card className="border-none" key={index}>
-                        <NextImage className="object-cover" src={shed.image} width={500} height={500} alt="Card Image" />
+                    <Card className="border-none"  key={index}>
+                        <NextImage className="object-cover" src={shed.image} width={5000} height={5000} alt="Card Image" />
                         <CardBody>
                             <h6 className="font-bold">{shed.size}</h6>
                             <p className="italic">{shed.sizeDescription}</p>
