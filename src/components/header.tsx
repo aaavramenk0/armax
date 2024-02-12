@@ -1,6 +1,8 @@
 import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import NextImage from "next/image";
+import logo from "../images/logo.png"
 
 // import Image from "next/image";
 // import logo from "../icons/logo.png"
@@ -28,15 +30,15 @@ export default function Header() {
             </NavbarContent>
             <NavbarContent className="md:hidden" justify="center">
                 <NavbarBrand>
-                    {/* <Image src={logo} width={48} alt="Logo of the company"></Image> */}
-                    <Link href="#home" color="foreground"><span className="font-bold text-[18px] pl-3">ArMax Renovation</span></Link>
+                    <NextImage src={logo} width={48} alt="Logo of the company" />
+                    <Link href="#home" color="foreground"><span className="font-bold text-[18px] pl-3">Shed Construction</span></Link>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-8" justify="center">
                 <NavbarBrand>
-                    {/* <Image src={logo} width={48} alt="Logo of the company"></Image> */}
-                    <Link href="#home" color="foreground"><span className="font-bold text-xl pl-3">ArMax Renovation</span></Link>
+                    <NextImage src={logo} width={48} alt="Logo of the company" />
+                    <Link href="#home" color="foreground"><span className="font-bold text-xl pl-3">Shed Construction</span></Link>
                 </NavbarBrand>
             </NavbarContent>
 
