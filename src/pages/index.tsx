@@ -117,7 +117,7 @@ export default function Home() {
                     <div className="mr-auto place-self-center lg:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl">Amazing sheds for your backyard</h1>
                         <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-xl lg:text-2xl">Transforming Your Backyard Dreams into Reality: Custom-Crafted Sheds Built with Precision and Care</p>
-                        <Button as={Link} onPress={onOpen} href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button>
+                        <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button>
                     </div>   
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                         <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
@@ -164,41 +164,6 @@ export default function Home() {
                     </ModalContent>
                 </Modal>
             </section>
-
-            {/* ABOUT section */}
-            <section className="bg-white" id="about">
-                <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                    <div className="max-w-screen-lg mb-8 lg:mb-16">
-                        <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 xl:text-5xl">ArMax Renovation - Your Partner in Expanding Your Living Space</h2>
-                        <p className="text-gray-500 sm:text-xl lg:text-2xl">Here at ArMax Renovation, we understand that your home is more than just a place to live; it's where life happens. That's why we're dedicated to creating extra space in your home with our beautifully designed and expertly crafted sheds. Our mission is to bring joy and functionality to your backyard, enhancing your living experience.</p>
-                    </div>
-                    <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                        <div>
-                            <div className="flex justify-center mx-auto items-center mb-4 w-20 h-20 rounded-full bg-primary-100">
-                                <FontAwesomeIcon icon={faHouseCircleCheck} className="fa-2x" />    
-                            </div>
-                            <h3 className="mb-2 text-xl font-bold">Crafting Your Ideal Outdoor Spaces</h3>
-                            <p className="text-gray-500">Our sheds are more than just structures; they are extensions of your home. We ensure that each shed is not only practical but also aesthetically pleasing, adding charm and character to your property. We believe in making spaces that are as beautiful as they are useful, spaces that bring joy to your everyday life.</p>
-                        </div>
-                        <div >
-                            <div className="flex justify-center mx-auto items-center mb-4 w-20 h-20 rounded-full bg-primary-100">
-                                <FontAwesomeIcon icon={faDollarSign} className="fa-2x" />    
-                            </div>
-                            <h3 className="mb-2 text-xl font-bold">Committed to Quality and Affordability</h3>
-                            <p className="text-gray-500">Understanding the value of your hard-earned money, we provide comprehensive services that include not only the construction of your new shed but also ongoing maintenance and the flexibility of moving your shed within your backyard. This approach ensures that your investment continues to meet your needs over time, without extra hassle or expense.</p>
-                        </div>
-                        <div>
-                            <div className="flex justify-center mx-auto items-center mb-4 w-20 h-20 rounded-full bg-primary-100">
-                                <FontAwesomeIcon icon={faUsers} className="fa-2x" />    
-                            </div>
-                            <h3 className="mb-2 text-xl font-bold">Customer Service at Its Best</h3>
-                            <p className="text-gray-500">At ArMax Renovation, exceptional customer service is not just a promise; it's our standard. We are committed to providing you with support whenever you need it, 24/7. Our team is always ready to assist, ensuring that your experience with us is as seamless and satisfying as the quality of our sheds.</p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
-
 
             {/* SHED CATALOG section */}
             <section className="bg-white" id="sheds">
@@ -303,14 +268,49 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                </section>
+            </section>
+
+            {/* ABOUT section */}
+            <section className="bg-white" id="about">
+                <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                    <div className="max-w-screen-lg mb-8 lg:mb-16">
+                        <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 xl:text-5xl">ArMax Renovation - Your Partner in Expanding Your Living Space</h2>
+                        <p className="text-gray-500 sm:text-xl lg:text-2xl">Here at ArMax Renovation, we understand that your home is more than just a place to live; it's where life happens. That's why we're dedicated to creating extra space in your home with our beautifully designed and expertly crafted sheds. Our mission is to bring joy and functionality to your backyard, enhancing your living experience.</p>
+                    </div>
+                    <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                        <div>
+                            <div className="flex justify-center mx-auto items-center mb-4 w-20 h-20 rounded-full bg-primary-100">
+                                <FontAwesomeIcon icon={faHouseCircleCheck} className="fa-2x" />    
+                            </div>
+                            <h3 className="mb-2 text-xl font-bold">Crafting Your Ideal Outdoor Spaces</h3>
+                            <p className="text-gray-500">Our sheds are more than just structures; they are extensions of your home. We ensure that each shed is not only practical but also aesthetically pleasing, adding charm and character to your property. We believe in making spaces that are as beautiful as they are useful, spaces that bring joy to your everyday life.</p>
+                        </div>
+                        <div >
+                            <div className="flex justify-center mx-auto items-center mb-4 w-20 h-20 rounded-full bg-primary-100">
+                                <FontAwesomeIcon icon={faDollarSign} className="fa-2x" />    
+                            </div>
+                            <h3 className="mb-2 text-xl font-bold">Committed to Quality and Affordability</h3>
+                            <p className="text-gray-500">Understanding the value of your hard-earned money, we provide comprehensive services that include not only the construction of your new shed but also ongoing maintenance and the flexibility of moving your shed within your backyard. This approach ensures that your investment continues to meet your needs over time, without extra hassle or expense.</p>
+                        </div>
+                        <div>
+                            <div className="flex justify-center mx-auto items-center mb-4 w-20 h-20 rounded-full bg-primary-100">
+                                <FontAwesomeIcon icon={faUsers} className="fa-2x" />    
+                            </div>
+                            <h3 className="mb-2 text-xl font-bold">Customer Service at Its Best</h3>
+                            <p className="text-gray-500">At ArMax Renovation, exceptional customer service is not just a promise; it's our standard. We are committed to providing you with support whenever you need it, 24/7. Our team is always ready to assist, ensuring that your experience with us is as seamless and satisfying as the quality of our sheds.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
             
             {/* FAQ section */}
             <section className="bg-white" id="faq">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <h2 className="mb-8 text-4xl text-center tracking-tight font-extrabold text-gray-900">Frequently Asked Questions</h2>
                     <div className="grid pt-8 text-left border-t gap-4 border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
-                        <Accordion variant="bordered" selectionMode="multiple"> 
+                        <Accordion variant="bordered"> 
                             <AccordionItem key="1" aria-label="Accordion 1" title="How long does it take to build and install a shed?">
                                 The timeline for building and installing a shed can vary depending on the complexity of the design and the level of customization. Typically, a shed can be built and installed within 4-6 weeks from the date of order.
                             </AccordionItem>

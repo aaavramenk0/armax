@@ -1,11 +1,17 @@
 import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 // import Image from "next/image";
 // import logo from "../icons/logo.png"
 
 export default function Header() {
     const pathname = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const handleMenuClose = () => {
+        setIsMenuOpen(true);
+    }
 
     const menuItems = [
         { label: "Home", href: "#home" },
@@ -16,7 +22,7 @@ export default function Header() {
     ]
     
     return (
-        <Navbar isBordered position="sticky">
+        <Navbar isBordered position="sticky" onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent className="md:hidden" justify="start">
                 <NavbarMenuToggle />
             </NavbarContent>
@@ -47,7 +53,7 @@ export default function Header() {
             <NavbarMenu>
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>
-                        <Link className="w-full" color="foreground" href={item.href} size="lg">{item.label}</Link>
+                        <Link className="w-full" onClick={handleMenuClose} color="foreground" href={item.href} size="lg">{item.label}</Link>
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>
