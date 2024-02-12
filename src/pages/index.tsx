@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Checkbox, Input, Link, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Textarea, useDisclosure } from "@nextui-org/react";
+import { Accordion, AccordionItem, Button, Card, CardBody, Checkbox, Input, Link, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Textarea, useDisclosure } from "@nextui-org/react";
 import NextImage from "next/image";
 import about from "../images/about.png"
 import small from "../images/shedCatalog/small.png"
@@ -163,11 +163,9 @@ export default function Home() {
                     )}
                     </ModalContent>
                 </Modal>
-
             </section>
 
             {/* ABOUT section */}
-
             <section className="bg-white" id="about">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <div className="max-w-screen-lg mb-8 lg:mb-16">
@@ -307,6 +305,38 @@ export default function Home() {
                 </div>
                 </section>
             
+            {/* FAQ section */}
+            <section className="bg-white" id="faq">
+                <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                    <h2 className="mb-8 text-4xl text-center tracking-tight font-extrabold text-gray-900">Frequently Asked Questions</h2>
+                    <div className="grid pt-8 text-left border-t gap-4 border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+                        <Accordion variant="bordered" selectionMode="multiple"> 
+                            <AccordionItem key="1" aria-label="Accordion 1" title="How long does it take to build and install a shed?">
+                                The timeline for building and installing a shed can vary depending on the complexity of the design and the level of customization. Typically, a shed can be built and installed within 4-6 weeks from the date of order.
+                            </AccordionItem>
+                            <AccordionItem key="2" aria-label="Accordion 2" title="Do you provide warranties on your sheds?">
+                                Absolutely. We stand by the quality of our work and offer a comprehensive warranty that covers material defects and workmanship. The length and terms of the warranty can be discussed during the consultation phase.
+                            </AccordionItem>
+                            <AccordionItem key="3" aria-label="Accordion 3" title="Are your sheds weather-resistant?">
+                                Yes, all of our sheds are constructed with high-quality materials that are chosen for their durability and resistance to weather. We also apply protective finishes to guard against the elements.
+                            </AccordionItem>
+                        </Accordion>
+                        <Accordion variant="bordered">
+                            <AccordionItem key="4" aria-label="Accordion 4" title="Do I need a permit to install a shed on my property?">
+                                Permit requirements can vary depending on your location. We recommend checking with your local municipality. If a permit is needed, we can provide guidance and support to help you through the process.
+                            </AccordionItem>  
+                            <AccordionItem key="5" aria-label="Accordion 5" title="How do I maintain my shed?">
+                                Maintenance requirements will depend on the materials used in your shed. We will provide you with maintenance instructions tailored to your specific shed, which may include regular cleaning, inspecting for damage, and reapplying protective finishes as needed.
+                            </AccordionItem>  
+                            <AccordionItem key="6" aria-label="Accordion 6" title="How can I get a quote for a shed?">
+                                You can get a quote by contacting us directly through our website or by phone. We'll discuss your needs, preferences, and the specifics of your property to provide you with a detailed estimate.
+                            </AccordionItem>  
+                        </Accordion>
+
+                    </div>
+                </div>
+                </section>
+
 
             {/* CONTACT section */}
             <section className="bg-white" id="contact">
@@ -316,7 +346,7 @@ export default function Home() {
                     <form action="#" className="space-y-8">
                         <div>
                             <label className="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                            <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
+                            <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@example.com" required />
                         </div>
                         <div>
                             <label className="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-300">Subject</label>
@@ -330,7 +360,7 @@ export default function Home() {
                     </form>
                 </div>
 
-                <div className="max-w-screen-lg flex justify-around align-middle m-auto mb-4 text-center">
+                <div className="max-w-screen-lg mb-4  md:flex md:justify-around md:align-middle md:m-auto md:mb-6 text-center">
                     {socialLinks.map((link, index) => (
                         <div key={index}>
                             <a href={link.href}><FontAwesomeIcon icon={link.icon} className="fa-3x" /></a>

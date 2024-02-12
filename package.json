@@ -20,6 +20,7 @@
     "@vercel/speed-insights": "^1.0.1",
     "next": "14.0.4",
     "nextjs-progressbar": "^0.0.16",
+    "preline": "^2.0.3",
     "react": "^18",
     "react-dom": "^18"
   },

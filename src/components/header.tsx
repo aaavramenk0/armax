@@ -11,6 +11,7 @@ export default function Header() {
         { label: "Home", href: "#home" },
         { label: "About us", href: "#about" },
         { label: "Shed catalog", href: "#sheds" },
+        { label: "FAQ", href: "#faq" },
         { label: "Contact us", href: "#contact" }
     ]
     
