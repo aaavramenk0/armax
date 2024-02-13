@@ -25,14 +25,15 @@ export default function Header() {
     
     return (
         <Navbar isBordered position="sticky" onMenuOpenChange={setIsMenuOpen}>
-            <NavbarContent className="md:hidden" justify="start">
-                <NavbarMenuToggle />
-            </NavbarContent>
+            
             <NavbarContent className="md:hidden" justify="center">
                 <NavbarBrand>
                     <NextImage src={logo} width={48} alt="Logo of the company" />
-                    <Link href="#home" color="foreground"><span className="font-bold text-[18px] pl-3">Shed Construction</span></Link>
+                    <Link href="#home" color="foreground"><span className="font-bold text-[26px] pl-3 xxs:text-[14px] xs:text-[26px]">Shed Construction</span></Link>
                 </NavbarBrand>
+            </NavbarContent>
+            <NavbarContent className="md:hidden " justify="end">
+                <NavbarMenuToggle />
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-8" justify="center">

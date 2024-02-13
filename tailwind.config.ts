@@ -21,6 +21,10 @@ module.exports = {
       },
       colors: {
         'black-rgba': 'rgba(0, 0, 0, 0.6)',
+      },
+      screens: {
+        'xxs': '200px',
+        'xs': '320px'
       }
     }
   },
