@@ -113,7 +113,7 @@ export default function Home() {
         <div>
             {/* HERO section */}
             <section className="bg-white" id="home">
-                <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                <div className="hidden lg:grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12">
                     <div className="mr-auto place-self-center lg:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl">Amazing sheds for your backyard</h1>
                         <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-xl lg:text-2xl">Transforming Your Backyard Dreams into Reality: Custom-Crafted Sheds Built with Precision and Care</p>
@@ -123,60 +123,30 @@ export default function Home() {
                         <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
                     </div>
                 </div>
-
-                {/* Modal window */}
-                <Modal 
-                    isOpen={isOpen} 
-                    onOpenChange={onOpenChange}
-                    placement="top-center"
-                >
-                    <ModalContent>
-                    {(onClose) => (
-                        <>
-                        <ModalHeader className="flex flex-col gap-1">Send Message</ModalHeader>
-                        <ModalBody>
-                            <Input
-                                autoFocus
-                                label="Full Name"
-                                placeholder="Enter your name"
-                                variant="bordered"
-                            />
-                            <Input
-                                label="Email"
-                                placeholder="Enter your email"
-                                variant="bordered"
-                            />
-                            <Textarea
-                                label="Your message"
-                                placeholder="Leave a comment..."
-                                rows={6}
-                                variant="bordered"
-                            />
-                                    
-                        </ModalBody>
-                        <ModalFooter>
-                            <Button className="text-white rounded-lg m-auto bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300" onPress={onClose}>
-                            Send Message
-                            </Button>
-                        </ModalFooter>
-                        </>
-                    )}
-                    </ModalContent>
-                </Modal>
+                <div className="grid lg:hidden grid-cols-4 items-center max-w-screen bg-primary px-12 py-10">
+                    <div className="pl-20 text-white font-bold  col-span-3">
+                        <h3 className="text-[2vw]">New Customers Offer</h3>
+                        <p className="text-[1.5vw]">Get 15% OFF on your first backyard shed. <br /> Join our customer list and save money!</p>
+                    </div>
+                    <div className="col-span-1">
+                        <Button as={Link} variant="solid" className="bg-white text-primary font-bold text-[20px] px-7 py-8"> Get FREE quote </Button>
+                    </div>
+                </div>
             </section>
+            
 
             {/* SHED CATALOG section */}
             <section className="bg-white" id="sheds">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Discover the Perfect Shed for Your Space</h2>
-                        <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Find the Ideal Shed Solution to Match Your Lifestyle and Storage Needs</p>
+                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Find the Ideal Shed Solution to Match Your Lifestyle and Storage Needs</h2>
+                        {/* <p className="mb-5 font-light text-gray-500 sm:text-xl">Find the Ideal Shed Solution to Match Your Lifestyle and Storage Needs</p> */}
                     </div>
                     <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-                        <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                        <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow">
                             <NextImage src={small} alt="Small shed" className="mb-4 rounded-lg"/>
                             <h3 className="mb-4 text-2xl font-semibold">Compact Classic (6 ft x 8 ft)</h3>
-                            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for smaller spaces</p>
+                            <p className="font-light text-gray-500 sm:text-lg ">Best option for smaller spaces</p>
                             <div className="flex justify-center items-baseline my-8">
                                 <span className="mr-2 text-5xl font-extrabold">$29</span>
                             </div>
@@ -370,6 +340,42 @@ export default function Home() {
                     ))}
                 </div>
             </section>
+
+            {/* Modal window */}
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center" >
+                <ModalContent>
+                {(onClose) => (
+                    <>
+                    <ModalHeader className="flex flex-col gap-1">Send Message</ModalHeader>
+                    <ModalBody>
+                        <Input
+                            autoFocus
+                            label="Full Name"
+                            placeholder="Enter your name"
+                            variant="bordered"
+                        />
+                        <Input
+                            label="Email"
+                            placeholder="Enter your email"
+                            variant="bordered"
+                        />
+                        <Textarea
+                            label="Your message"
+                            placeholder="Leave a comment..."
+                            rows={6}
+                            variant="bordered"
+                        />
+                                
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button className="text-white rounded-lg m-auto bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300" onPress={onClose}>
+                        Send Message
+                        </Button>
+                    </ModalFooter>
+                    </>
+                )}
+                </ModalContent>
+            </Modal>
         </div>   
     )
 }

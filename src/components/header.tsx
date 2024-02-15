@@ -17,8 +17,8 @@ export default function Header() {
 
     const menuItems = [
         { label: "Home", href: "#home" },
-        { label: "About us", href: "#about" },
         { label: "Shed catalog", href: "#sheds" },
+        { label: "About us", href: "#about" },
         { label: "FAQ", href: "#faq" },
         { label: "Contact us", href: "#contact" }
     ]
