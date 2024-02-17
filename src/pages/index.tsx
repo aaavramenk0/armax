@@ -123,13 +123,15 @@ export default function Home() {
                         <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
                     </div>
                 </div>
-                <div className="grid lg:hidden grid-cols-4 items-center max-w-screen bg-primary px-12 py-10">
-                    <div className="pl-20 text-white font-bold  col-span-3">
-                        <h3 className="text-[2vw]">New Customers Offer</h3>
-                        <p className="text-[1.5vw]">Get 15% OFF on your first backyard shed. <br /> Join our customer list and save money!</p>
-                    </div>
-                    <div className="col-span-1">
-                        <Button as={Link} variant="solid" className="bg-white text-primary font-bold text-[20px] px-7 py-8"> Get FREE quote </Button>
+                <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12 bg-primary-300">
+                    <div className="mr-auto place-self-center lg:col-span-7 text-white">
+                        <p className="max-w-2xl font-medium text-white lg:mb-8 md:text-xl lg:text-2xl uppercase">Exclusive offer for new customers</p>
+                        <h1 className="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-6xl">Transform your backyard with 15% off your first shed! </h1>
+                        <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-xl lg:text-2xl">Order Your Shed Now and Get a Free Professional Consultation. Elevate Your Outdoor Space with Us!</p>
+                        <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button>
+                    </div>   
+                    <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                        <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
                     </div>
                 </div>
             </section>
@@ -152,7 +154,6 @@ export default function Home() {
                             </div>
                             <ul role="list" className="mb-8 space-y-4 text-left">
                                 <li className="flex items-center space-x-3">
-                                   
                                     <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                                     <span>Sturdy construction with weather-resistant materials.</span>
                                 </li>
@@ -342,36 +343,16 @@ export default function Home() {
             </section>
 
             {/* Modal window */}
-            <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center" >
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center" className="pb-7" >
                 <ModalContent>
                 {(onClose) => (
                     <>
                     <ModalHeader className="flex flex-col gap-1">Send Message</ModalHeader>
                     <ModalBody>
-                        <Input
-                            autoFocus
-                            label="Full Name"
-                            placeholder="Enter your name"
-                            variant="bordered"
-                        />
-                        <Input
-                            label="Email"
-                            placeholder="Enter your email"
-                            variant="bordered"
-                        />
-                        <Textarea
-                            label="Your message"
-                            placeholder="Leave a comment..."
-                            rows={6}
-                            variant="bordered"
-                        />
-                                
+                        <Button as={Link} color="primary" startContent={<FontAwesomeIcon icon={faComments} />} href="sms:+14044165745" className="text-lg font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300">Text us</Button>
+                        <Button as={Link} color="danger" startContent={<FontAwesomeIcon icon={faEnvelope} />} href="mailto:armaxrenovation@gmail.com" className="text-lg font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300">Email us</Button>
+                        <Button as={Link} color="success" startContent={<FontAwesomeIcon icon={faWhatsapp} />} href="https://wa.me/14044165745" className="text-lg font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300">WhatsApp</Button>        
                     </ModalBody>
-                    <ModalFooter>
-                        <Button className="text-white rounded-lg m-auto bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300" onPress={onClose}>
-                        Send Message
-                        </Button>
-                    </ModalFooter>
                     </>
                 )}
                 </ModalContent>
