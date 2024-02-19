@@ -118,43 +118,88 @@ export default function Home() {
                     <div className="mr-auto place-self-center lg:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl">Welcome to the world of comfy and stylish sheds!</h1>
                         <p className="max-w-2xl mb-6 font-medium text-gray-500 lg:mb-8 md:text-xl lg:text-2xl">Don't overpay - Make the right decision by choosing us and get your shed with the lowest price</p>
-                        <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button>
+                        
+                        {/* <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button> */}
                     </div>   
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                         <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
                     </div>
                 </div>
-                <div className="relative flex overflow-x-hidden">
-                    <div className="py-0 animate-marquee whitespace-nowrap">
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                    </div>
+                <div className="flex overflow-x-hidden">
+                        <div className="py-0 animate-marquee whitespace-nowrap">
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                        </div>
 
-                    <div className="absolute top-0 py-0 animate-marquee2 whitespace-nowrap">
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
-                        <span className="text-xl mx-4">SALE</span>
+                        <div className="animate-marquee2 whitespace-nowrap">
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                            <span className="text-xl mx-4">SALE</span>
+                        </div>
                     </div>
-                </div>
             </section>
             
 
@@ -162,15 +207,14 @@ export default function Home() {
             <section className="bg-white" id="sheds">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Find the Ideal Shed Solution to Match Your Lifestyle and Storage Needs</h2>
-                        {/* <p className="mb-5 font-light text-gray-500 sm:text-xl">Find the Ideal Shed Solution to Match Your Lifestyle and Storage Needs</p> */}
+                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Our shed options are perfect solutions for those who value functionality</h2>
+                        <p className="mb-5 font-medium text-gray-500 sm:text-xl">They provide everything you need to store your belongings at an affordable price</p>
                     </div>
                     <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                         <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow">
                             <NextImage src={small} alt="Small shed" className="mb-4 rounded-lg"/>
-                            <h3 className="mb-4 text-2xl font-semibold">Compact Classic (6 ft x 8 ft)</h3>
-                            <p className="font-light text-gray-500 sm:text-lg ">Best option for smaller spaces</p>
-                            <div className="flex justify-center items-baseline my-8">
+                            <h3 className="text-2xl font-semibold">Compact Classic (6 ft x 8 ft)</h3>
+                            <div className="flex justify-center items-baseline my-5">
                                 <span className="mr-2 text-5xl font-extrabold">$29</span>
                             </div>
                             <ul role="list" className="mb-8 space-y-4 text-left">
@@ -199,9 +243,8 @@ export default function Home() {
                         
                         <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                             <NextImage src={medium} alt="Small shed" className="mb-4 rounded-lg"/>
-                            <h3 className="mb-4 text-2xl font-semibold">Urban Organizer (6 ft x 10 ft)</h3>
-                            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">A Blend of Space and Functionality</p>
-                            <div className="flex justify-center items-baseline my-8">
+                            <h3 className="text-2xl font-semibold">Urban Organizer (6 ft x 10 ft)</h3>
+                            <div className="flex justify-center items-baseline my-5">
                                 <span className="mr-2 text-5xl font-extrabold">$99</span>
                             </div>
                             
@@ -231,9 +274,8 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                             <NextImage src={large} alt="Small shed" className="mb-4 rounded-lg"/>
-                            <h3 className="mb-4 text-2xl font-semibold">Garden Haven (8 ft x 10 ft)</h3>
-                            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Spacious and Versatile</p>
-                            <div className="flex justify-center items-baseline my-8">
+                            <h3 className="text-2xl font-semibold">Garden Haven (8 ft x 10 ft)</h3>
+                            <div className="flex justify-center items-baseline my-5">
                                 <span className="mr-2 text-5xl font-extrabold">$499</span>
                             </div>
                             <ul role="list" className="mb-8 space-y-4 text-left">
