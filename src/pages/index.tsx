@@ -113,25 +113,46 @@ export default function Home() {
         <div>
             {/* HERO section */}
             <section className="bg-white" id="home">
-                <div className="hidden lg:grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12 ">
+                {/* <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12 bg-primary-300"> */}
                     <div className="mr-auto place-self-center lg:col-span-7">
-                        <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl">Amazing sheds for your backyard</h1>
-                        <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-xl lg:text-2xl">Transforming Your Backyard Dreams into Reality: Custom-Crafted Sheds Built with Precision and Care</p>
+                        <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl">Welcome to the world of comfy and stylish sheds!</h1>
+                        <p className="max-w-2xl mb-6 font-medium text-gray-500 lg:mb-8 md:text-xl lg:text-2xl">Don't overpay - Make the right decision by choosing us and get your shed with the lowest price</p>
                         <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button>
                     </div>   
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                         <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
                     </div>
                 </div>
-                <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12 bg-primary-300">
-                    <div className="mr-auto place-self-center lg:col-span-7 text-white">
-                        <p className="max-w-2xl font-medium text-white lg:mb-8 md:text-xl lg:text-2xl uppercase">Exclusive offer for new customers</p>
-                        <h1 className="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-6xl">Transform your backyard with 15% off your first shed! </h1>
-                        <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-xl lg:text-2xl">Order Your Shed Now and Get a Free Professional Consultation. Elevate Your Outdoor Space with Us!</p>
-                        <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button>
-                    </div>   
-                    <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                        <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
+                <div className="relative flex overflow-x-hidden">
+                    <div className="py-0 animate-marquee whitespace-nowrap">
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                    </div>
+
+                    <div className="absolute top-0 py-0 animate-marquee2 whitespace-nowrap">
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
+                        <span className="text-xl mx-4">SALE</span>
                     </div>
                 </div>
             </section>

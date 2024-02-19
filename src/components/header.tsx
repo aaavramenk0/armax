@@ -2,7 +2,7 @@ import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, Navba
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import NextImage from "next/image";
-import logo from "../images/logo.png"
+import logo from "../images/logo1.png"
 
 // import Image from "next/image";
 // import logo from "../icons/logo.png"
