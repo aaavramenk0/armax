@@ -2,7 +2,7 @@ import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, Navba
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import NextImage from "next/image";
-import logo from "../images/logo1.png"
+import logo from "../images/logo2.png"
 
 // import Image from "next/image";
 // import logo from "../icons/logo.png"
@@ -29,7 +29,7 @@ export default function Header() {
             <NavbarContent className="md:hidden" justify="center">
                 <NavbarBrand>
                     <NextImage src={logo} width={48} alt="Logo of the company" />
-                    <Link href="#home" color="foreground"><span className="font-bold text-[26px] pl-3 xxs:text-[14px] xs:text-[26px]">Shed Construction</span></Link>
+                    <Link href="#home" color="foreground"><span className="font-bold text-[26px] pl-3 xxs:text-[14px] xs:text-[20px]">Shed Construction</span></Link>
                 </NavbarBrand>
             </NavbarContent>
             <NavbarContent className="md:hidden " justify="end">
