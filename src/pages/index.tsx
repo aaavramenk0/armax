@@ -119,35 +119,19 @@ export default function Home() {
                         <h1 className="max-w-2xl mb-4 text-4xl font-semibold tracking-tight leading-none md:text-6xl">Welcome to the world of comfy and stylish sheds!</h1>
                         <p className="max-w-2xl mb-6 text-lg text-black lg:mb-8 md:text-xl lg:text-2xl">Don't overpay - Make the right decision by choosing us and get your shed ready to use with the lowest price</p> <p className="hidden">Shed should be ready to use</p>
                         
-                        {/* <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button> */}
+                        <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-red-700">Message us</Button>
                     </div>   
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                         <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
                     </div>
                 </div>
-                <div className="flex overflow-x-hidden">
-                    <div className="py-0 animate-marquee whitespace-nowrap">
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                    </div>
-
-                    <div className="animate-marquee2 whitespace-nowrap">
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                    </div>
-                </div>
+                
             </section>
             
 
             {/* SHED CATALOG section */}
             <section className="bg-white" id="sheds">
-                <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+                <div className="pb-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-md  mb-8 lg:mb-12">
                         <h2 className="mb-4 text-4xl font-semibold tracking-tight text-gray-900">Our shed options are perfect solutions for those who value functionality</h2>
                         <p className="text-lg text-black sm:text-xl">They provide everything you need to store your belongings at an affordable price</p>
@@ -179,22 +163,22 @@ export default function Home() {
                             <ul role="list" className="mb-8 space-y-4 text-left">
                                 <li className="flex items-center space-x-3">
                                     <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    <span>Sturdy construction with weather-resistant materials.</span>
+                                    <span>Sturdy construction with weather-resistant materials</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     
                                     <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    <span>Customizable shelving and storage options.</span>
+                                    <span>Delivery and set up</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     
                                     <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    <span>Elegant design that complements any backyard.</span>
+                                    <span>Custom color</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     
                                     <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    <span>Ideal for small families and urban homes</span>
+                                    <span>Free maintenance</span>
                                 </li>
                             </ul>
                             <a href="#" className="text-white bg-red-700 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-xl px-3 py-2 text-center">Get started</a>
