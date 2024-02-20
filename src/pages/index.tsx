@@ -117,7 +117,7 @@ export default function Home() {
                 {/* <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12 bg-primary-300"> */}
                     <div className="mr-auto place-self-center lg:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-semibold tracking-tight leading-none md:text-6xl">Welcome to the world of comfy and stylish sheds!</h1>
-                        <p className="max-w-2xl mb-6 text-lg text-black lg:mb-8 md:text-xl lg:text-2xl">Don't overpay - Make the right decision by choosing us and get your shed with the lowest price</p>
+                        <p className="max-w-2xl mb-6 text-lg text-black lg:mb-8 md:text-xl lg:text-2xl">Don't overpay - Make the right decision by choosing us and get your shed ready to use with the lowest price</p> <p className="hidden">Shed should be ready to use</p>
                         
                         {/* <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">Message us</Button> */}
                     </div>   
@@ -127,7 +127,7 @@ export default function Home() {
                 </div>
                 <div className="flex overflow-x-hidden">
                         <div className="py-0 animate-marquee whitespace-nowrap">
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
                             <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
                             <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
                             <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
@@ -148,9 +148,9 @@ export default function Home() {
             {/* SHED CATALOG section */}
             <section className="bg-white" id="sheds">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-                    <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Our shed options are perfect solutions for those who value functionality</h2>
-                        <p className="mb-5 font-medium text-gray-500 sm:text-xl">They provide everything you need to store your belongings at an affordable price</p>
+                    <div className="mx-auto max-w-screen-md  mb-8 lg:mb-12">
+                        <h2 className="mb-4 text-4xl font-semibold tracking-tight text-gray-900">Our shed options are perfect solutions for those who value functionality</h2>
+                        <p className="mb-5 text-lg text-black sm:text-xl">They provide everything you need to store your belongings at an affordable price</p>
                     </div>
                     <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                         <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow">
