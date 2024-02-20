@@ -2,6 +2,7 @@ import Footer from './footer'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from './header'
+import Marquee from './marquee'
 
 const inter = Inter({ subsets: ['latin'] })
 
