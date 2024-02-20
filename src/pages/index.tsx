@@ -1,7 +1,7 @@
 import { Accordion, AccordionItem, Button, Card, CardBody, Checkbox, Input, Link, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Textarea, useDisclosure } from "@nextui-org/react";
 import NextImage from "next/image";
 import about from "../images/about.png"
-import small from "../images/shedCatalog/small.png"
+import small from "../images/shedCatalog/small1.png"
 import medium from "../images/shedCatalog/medium.png"
 import large from "../images/shedCatalog/large.png"
 import xlarge from "../images/shedCatalog/xlarge.png"
@@ -126,22 +126,22 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex overflow-x-hidden">
-                        <div className="py-0 animate-marquee whitespace-nowrap">
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                        </div>
-
-                        <div className="animate-marquee2 whitespace-nowrap">
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
-                        </div>
+                    <div className="py-0 animate-marquee whitespace-nowrap">
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
                     </div>
+
+                    <div className="animate-marquee2 whitespace-nowrap">
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
+                        <span className="text-xl mx-4 text-primary-700 font-semibold">SALE</span>
+                    </div>
+                </div>
             </section>
             
 
@@ -150,14 +150,31 @@ export default function Home() {
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-md  mb-8 lg:mb-12">
                         <h2 className="mb-4 text-4xl font-semibold tracking-tight text-gray-900">Our shed options are perfect solutions for those who value functionality</h2>
-                        <p className="mb-5 text-lg text-black sm:text-xl">They provide everything you need to store your belongings at an affordable price</p>
+                        <p className="text-lg text-black sm:text-xl">They provide everything you need to store your belongings at an affordable price</p>
+                    </div>
+                    <div className="flex overflow-x-hidden my-5">
+                        <div className="py-0 animate-marquee whitespace-nowrap">
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                        </div>
+
+                        <div className="animate-marquee2 whitespace-nowrap">
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done from only $1850</span>
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                            <span className="text-xl mx-4 text-primary-700 font-semibold">SALE | Get your shed done for only $1950</span>
+                        </div>
                     </div>
                     <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                         <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow">
                             <NextImage src={small} alt="Small shed" className="mb-4 rounded-lg"/>
                             <h3 className="text-2xl font-semibold">Compact Classic (6 ft x 8 ft)</h3>
                             <div className="flex justify-center items-baseline my-5">
-                                <span className="mr-2 text-5xl font-extrabold">$29</span>
+                                <span className="mr-2 text-4xl font-semibold text-red-600">$1850</span>
                             </div>
                             <ul role="list" className="mb-8 space-y-4 text-left">
                                 <li className="flex items-center space-x-3">
@@ -180,7 +197,7 @@ export default function Home() {
                                     <span>Ideal for small families and urban homes</span>
                                 </li>
                             </ul>
-                            <a href="#" className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
+                            <a href="#" className="text-white bg-red-700 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-xl px-3 py-2 text-center">Get started</a>
                         </div>
                         
                         <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
