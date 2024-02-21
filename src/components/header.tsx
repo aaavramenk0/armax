@@ -29,21 +29,21 @@ export default function Header() {
                     <Link href="#home" color="foreground"><span className="font-semibold text-[26px] pl-2 xxs:text-[14px] xs:text-[22px]">Shed Construction</span></Link>
                 </NavbarBrand>
             </NavbarContent>
-            <NavbarContent className="md:hidden " justify="end">
+            <NavbarContent className="md:hidden" justify="end">
                 <NavbarMenuToggle />
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-8" justify="center">
                 <NavbarBrand>
                     <NextImage src={logo} width={48} alt="Logo of the company" />
-                    <Link href="#home" color="foreground"><span className="font-bold text-red-500 text-xl pl-3">Shed Construction</span></Link>
+                    <Link href="#home" color="foreground"><span className="font-bold lg:text-red-500 text-xl pl-3">Shed Construction</span></Link>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-8" justify="end">
                 {menuItems.map((item, index) => (
                     <NavbarItem isActive={pathname == `${item.href}` ? true : false} key={index}>
-                        <Link color="foreground" href={item.href} className="text-[18px]">
+                        <Link color="foreground" href={item.href} className="text-[18px] lg:text-red-500 font-semibold">
                             {item.label}
                         </Link>
                     </NavbarItem>

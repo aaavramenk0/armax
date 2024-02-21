@@ -21,10 +21,13 @@ module.exports = {
       },
       colors: {
         'black-rgba': 'rgba(0, 0, 0, 0.6)',
+        'heading': 'rgb(17, 24, 39)',
+        'subheading': 'rgb(55, 65, 81)'
       },
       screens: {
         'xxs': '200px',
-        'xs': '320px'
+        'xs': '320px',
+        'xl': '1100px'
       },
       animation: {
         marquee: 'marquee 70s linear infinite',
