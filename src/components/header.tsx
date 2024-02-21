@@ -9,7 +9,7 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleMenuClose = () => {
-        setIsMenuOpen(true);
+        setIsMenuOpen(false);
     }
 
     const menuItems = [
@@ -21,8 +21,7 @@ export default function Header() {
     ]
     
     return (
-        <Navbar isBordered position="sticky" onMenuOpenChange={setIsMenuOpen}>
-            
+        <Navbar isBordered disableAnimation position="sticky" onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen}>
             <NavbarContent className="md:hidden" justify="center">
                 <NavbarBrand>
                     <NextImage src={logo} width={48} alt="Logo of the company" />
@@ -30,7 +29,7 @@ export default function Header() {
                 </NavbarBrand>
             </NavbarContent>
             <NavbarContent className="md:hidden" justify="end">
-                <NavbarMenuToggle />
+                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"}/>
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-8" justify="center">
@@ -43,7 +42,7 @@ export default function Header() {
             <NavbarContent className="hidden md:flex gap-8" justify="end">
                 {menuItems.map((item, index) => (
                     <NavbarItem isActive={pathname == `${item.href}` ? true : false} key={index}>
-                        <Link color="foreground" href={item.href} className="text-[18px] lg:text-red-500 font-semibold">
+                        <Link color="foreground" onClick={handleMenuClose} href={item.href} className="text-[18px] lg:text-red-500 font-semibold">
                             {item.label}
                         </Link>
                     </NavbarItem>

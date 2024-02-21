@@ -4,11 +4,5 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 1rem;
-}
-
-@media screen and (max-width: 1024px) {
-    html {
-        scroll-padding-top: 3rem;
-    }   
+    scroll-padding-top: 75px;
 }
