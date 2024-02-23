@@ -24,6 +24,9 @@ module.exports = {
         'heading': 'rgb(17, 24, 39)',
         'subheading': 'rgb(55, 65, 81)'
       },
+      typography: {
+        'small-caps': { 'font-variant-caps': 'small-caps' }
+      },
       screens: {
         'xxs': '200px',
         'xs': '320px',

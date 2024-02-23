@@ -74,8 +74,8 @@ export default function Home() {
             <section className="bg-white" id="sheds">
                 <div className="pb-8 px-4 mx-auto max-w-screen-xl lg:py-8">
                     <div className="mx-auto max-w-screen-xl mb-8">
-                        <h2 className="mb-4 text-4xl font-semibold tracking-tight text-heading md:text-6xl lg:text-center">Our shed options are perfect solutions for those who value functionality</h2>
-                        <p className="text-lg text-subheading sm:text-xl lg:text-2xl lg:text-center">They provide everything you need to store your belongings at an affordable price</p>
+                        <h2 className="mb-4 text-3xl font-semibold tracking-tight text-heading md:text-5xl lg:text-center">Shed Catalog</h2>
+                        <p className="text-lg text-subheading sm:text-xl lg:text-2xl lg:text-center">Our sheds provide everything you need to store your belongings and are the perfect solution for those who value functionality</p>
                     </div>
                     <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                         {shedCatalog.map((shed, index) => (
@@ -116,7 +116,7 @@ export default function Home() {
             <section className="bg-white" id="about">
                 <div className="pt-8 px-4 mx-auto max-w-screen-xl">
                     <div className="max-w-screen-lg mb-8">
-                        <h2 className="mb-4 text-4xl tracking-tight font-semibold text-heading md:text-5xl">ArMax Renovation - We are building trust, not only sheds</h2>
+                        <h2 className="mb-4 text-3xl tracking-tight font-semibold text-heading md:text-5xl">ArMax Renovation - We are building trust, not only sheds</h2>
                         <p className="text-subheading text-lg lg:text-2xl">Our mission is to inspire our customers by making your life more comfy and better. We always serve every customer in the unique way. We guarantee quality out products and provide complementary maintenance</p>
                     </div>
                     <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
@@ -143,8 +143,8 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="text-center py-10 px-5 my-10 border border-grey-200 shadow  rounded-lg">
-                        <h2 className="mb-4 text-4xl tracking-tight font-semibold text-heading md:text-5xl">Join our family today!</h2>
-                        <p className="text-subheading text-lg sm:text-xl  lg:text-2xl">We invite you to experience our company difference. Let us show you how our dedication to quality, customer service, and honest craftsmanship can make your life better and more comfortable. We're not just building sheds; we're building a legacy of satisfied customers. Thank you for considering ArMax Renovation for your shed construction needs. We look forward to serving you and earning your kind words and trust.</p> 
+                        <h2 className="mb-4 text-4xl tracking-tight font-semibold text-heading md:text-5xl">Get your <span className="text-red-700 font-small-caps">FREE</span> shed estimate today!</h2>
+                        <p className="text-subheading text-lg sm:text-xl  lg:text-2xl">Experience quality and style with our durable sheds. Perfect for storage, work, or relaxation. Join our community of happy customers. Make the most of your backyard today!</p> 
                         <Link as={Button} onPress={onOpen} type="submit" color="danger" isBlock className="text-md text-white px-10 bg-red-700 font-medium rounded-lg md:text-2xl md:px-10 md:py-8 text-center m-auto mt-5 ">Message us</Link>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ export default function Home() {
             {/* FAQ section */}
             <section className="bg-white" id="faq">
                 <div className="px-4 mx-auto max-w-screen-xl lg:px-6">
-                    <h2 className="mb-8 text-4xl text-center tracking-tight font-semibold text-heading md:text-5xl">Frequently Asked Questions</h2>
+                    <h2 className="mb-8 text-3xl text-center tracking-tight font-semibold text-heading md:text-5xl">Frequently Asked Questions</h2>
                     <div className="grid pt-8 text-left border-t gap-4 border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
                         <Accordion variant="bordered"> 
                             <AccordionItem key="1" aria-label="Accordion 1" title="How long does it take to build and install a shed?">
@@ -187,7 +187,7 @@ export default function Home() {
             {/* CONTACT section */}
             <section className="bg-white" id="contact">
                 <div className="py-5 lg:py-8 px-4 mx-auto max-w-screen-lg">
-                    <h2 className="mb-4 text-4xl tracking-tight font-semibold text-center text-heading md:text-5xl">Contact Us</h2>
+                    <h2 className="mb-4 text-3xl tracking-tight font-semibold text-center text-heading md:text-5xl">Contact Us</h2>
                     {/* <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p> */}
                     <form action="#" className="space-y-8 text-center">
                         <div>
@@ -209,9 +209,9 @@ export default function Home() {
                 <div className="max-w-screen-lg mb-4 md:flex md:justify-around md:align-middle md:m-auto md:mb-6 text-center">
                     {socialLinks.map((link, index) => (
                         <div key={index}>
-                            <a href={link.href}><FontAwesomeIcon icon={link.icon} className="fa-4x" /></a>
-                            <a href={link.href}><h4 className="text-2xl font-semibold font-heading">{link.heading}</h4></a>
-                            <Link href={link.href} color="danger" className="mb-4 text-xl font-semibold text-red-600" isBlock showAnchorIcon>{link.description}</Link>
+                            <a href={link.href} target="blank"><FontAwesomeIcon icon={link.icon} className="fa-4x" /></a>
+                            <a href={link.href} target="blank"><h4 className="text-2xl font-semibold font-heading">{link.heading}</h4></a>
+                            <Link href={link.href} target="blank" color="danger" className="mb-4 text-xl font-semibold text-red-600" isBlock showAnchorIcon>{link.description}</Link>
                         </div>
                     ))}
                 </div>
@@ -224,9 +224,9 @@ export default function Home() {
                     <>
                     <ModalHeader className="flex flex-col gap-1">Send Message</ModalHeader>
                     <ModalBody>
-                        <Button as={Link} color="primary" startContent={<FontAwesomeIcon icon={faComments} />} href="sms:+14044165745" className="text-lg font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300">Text us</Button>
-                        <Button as={Link} color="danger" startContent={<FontAwesomeIcon icon={faEnvelope} />} href="mailto:armaxrenovation@gmail.com" className="text-lg font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300">Email us</Button>
-                        <Button as={Link} color="success" startContent={<FontAwesomeIcon icon={faWhatsapp} />} href="https://wa.me/14044165745" className="text-lg font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300">WhatsApp</Button>        
+                        <Button as={Link} color="primary" target="blank" startContent={<FontAwesomeIcon icon={faComments} />} href="sms:+14044165745" className="text-lg font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300">Text us</Button>
+                        <Button as={Link} color="danger" target="blank" startContent={<FontAwesomeIcon icon={faEnvelope} />} href="mailto:armaxrenovation@gmail.com" className="text-lg font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300">Email us</Button>
+                        <Button as={Link} color="success" target="blank" startContent={<FontAwesomeIcon icon={faWhatsapp} />} href="https://wa.me/14044165745" className="text-lg font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300">WhatsApp</Button>        
                     </ModalBody>
                     </>
                 )}

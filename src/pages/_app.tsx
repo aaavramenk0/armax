@@ -16,10 +16,19 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
         <SpeedInsights />
         <Head>
-            <link rel="shortcut icon" href="../../static/favicon.ico" type="image/x-icon" />
-            <title>ArMax Renovation LLC</title>
-            <meta charSet="utf-8" />
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <link rel="shortcut icon" href="../../static/favicon.ico" type="image/x-icon" />
+          <title>Shed Construction</title>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          
+        {/* SEO */}
+          <meta name="description" content="ArMax Renovation LLC specializes in high-quality, affordable shed construction and installation services with a 3-year warranty. Explore our range of durable, weather-resistant sheds perfect for any outdoor space" />
+          <meta name="keywords" content="Shed Construction, Affordable Sheds, Quality Sheds, Custom Sheds, Weather-Resistant Sheds, Garden Sheds, Outdoor Storage, Shed Builders, Shed Installation, Shed Warranty, Shed Construction, Shed Construction Company, Shed Construction Company in Georgia, Shed Construction Company in Atlanta, Sheds in Atlanta, Sheds in Georgia, Back offices in Georgia, Shed Construction Company near me" />
+          <meta name="author" content="ArMax Renovation LLC" />
+          <meta name="robots" content="index, follow" />
+          <meta name="language" content="English" />
+          <meta name="revisit-after" content="7 days" />
+          <meta name="application-name" content="Shed Construction" />
         </Head>
         <NextUIProvider>
             <RootLayout >
