@@ -69,9 +69,11 @@ export default function Home() {
             })
             .then(
                 (response) => {
+                    e.preventDefault();
                     console.log('SUCCESS!', response.status, response.text);
                 },
                 (error) => {
+                    e.preventDefault();
                     console.log('FAILED...', error);
                 }
             )
