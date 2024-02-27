@@ -8,6 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faDollarSign, faHouseCircleCheck, faUsers } from "@fortawesome/free-solid-svg-icons";
+import emailjs from '@emailjs/browser';
+import { error } from "console";
+import { useRef } from "react";
 
 export default function Home() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -50,6 +53,29 @@ export default function Home() {
             description: "404 416 5745"
         }
     ]
+
+    const templateParams = {
+        clientName: 'Jack',
+        clientEmail: 'example@gmail.com',
+        clientPhone: '1234567890',
+        clientMessage: 'I would like to book a shed'
+    }
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+
+        emailjs
+            .send('service_60d2ovq', 'template_1v08ovx', templateParams, {
+                publicKey: 'c3wYcruUL-Jeg_u2d'
+            })
+            .then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                },
+                (error) => {
+                    console.log('FAILED...', error);
+                }
+            )
+    }
     
     return (
         <div>
@@ -241,7 +267,7 @@ export default function Home() {
                             <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your message</label>
                             <textarea id="message" rows={6} className="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300" placeholder="Let us know how we can help you..."></textarea>
                         </div>
-                        <Link as={Button} type="submit" color="danger" isBlock className=" text-white px-10 bg-red-700 font-medium rounded-lg text-xl text-center">Message us</Link>
+                        <Link as={Button} type="submit" onSubmit={sendEmail} color="danger" isBlock className=" text-white px-10 bg-red-700 font-medium rounded-lg text-xl text-center">Message us</Link>
                     </form>
                 </div>
 
