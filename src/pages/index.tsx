@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, Button, Link, Modal, ModalBody, ModalContent, ModalHeader, useDisclosure } from "@nextui-org/react";
+import { Accordion, AccordionItem, Button, Link, Modal, ModalBody, ModalContent, ModalHeader, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow, useDisclosure } from "@nextui-org/react";
 import NextImage from "next/image";
 import small from "../images/shedCatalog/small1.png"
 import medium from "../images/shedCatalog/medium1.png"
@@ -158,10 +158,10 @@ export default function Home() {
                     <div className="grid pt-8 text-left border-t gap-4 border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
                         <Accordion variant="bordered"> 
                             <AccordionItem key="1" aria-label="Accordion 1" title="How long does it take to build and install a shed?">
-                                The timeline for building and installing a shed can vary depending on the complexity of the design and the level of customization. Typically, a shed can be built and installed within 4-6 weeks from the date of order.
+                                The timeline for building and installing a shed can vary depending on the complexity of the design and the level of customization. Typically, a shed can be built and installed within 1-3 days from the date of order.
                             </AccordionItem>
                             <AccordionItem key="2" aria-label="Accordion 2" title="Do you provide warranties on your sheds?">
-                                Absolutely. We stand by the quality of our work and offer a comprehensive warranty that covers material defects and workmanship. The length and terms of the warranty can be discussed during the consultation phase.
+                                Absolutely. We stand by the quality of our work and offer a warranty that covers all the defects. The length of the warranty is 3 years.
                             </AccordionItem>
                             <AccordionItem key="3" aria-label="Accordion 3" title="Are your sheds weather-resistant?">
                                 Yes, all of our sheds are constructed with high-quality materials that are chosen for their durability and resistance to weather. We also apply protective finishes to guard against the elements.
@@ -169,14 +169,49 @@ export default function Home() {
                         </Accordion>
                         <Accordion variant="bordered">
                             <AccordionItem key="4" aria-label="Accordion 4" title="Do I need a permit to install a shed on my property?">
-                                Permit requirements can vary depending on your location. We recommend checking with your local municipality. If a permit is needed, we can provide guidance and support to help you through the process.
-                            </AccordionItem>  
-                            <AccordionItem key="5" aria-label="Accordion 5" title="How do I maintain my shed?">
-                                Maintenance requirements will depend on the materials used in your shed. We will provide you with maintenance instructions tailored to your specific shed, which may include regular cleaning, inspecting for damage, and reapplying protective finishes as needed.
-                            </AccordionItem>  
-                            <AccordionItem key="6" aria-label="Accordion 6" title="How can I get a quote for a shed?">
+                                Permits are not required to install a shed on your property. 
+                            </AccordionItem>    
+                            <AccordionItem key="5" aria-label="Accordion 5" title="How can I get a quote for a shed?">
                                 You can get a quote by contacting us directly through our website or by phone. We'll discuss your needs, preferences, and the specifics of your property to provide you with a detailed estimate.
                             </AccordionItem>  
+                            <AccordionItem key="6" aria-label="Accordion 6" title="What are the possible sizes and prices of the sheds that you can build?">
+                                <Table removeWrapper aria-label="Shed sizes and price table">
+                                    <TableHeader>
+                                        <TableColumn className="text-md"> SIZE </TableColumn>
+                                        <TableColumn className="text-md"> PRICE </TableColumn>
+                                    </TableHeader>
+                                    <TableBody>
+                                        <TableRow key="1"> 
+                                            <TableCell className="text-md">6ft x 8ft</TableCell>
+                                            <TableCell className="text-md">$1850</TableCell>
+                                        </TableRow>
+                                        <TableRow key="2"> 
+                                            <TableCell className="text-md">8ft x 8ft</TableCell>
+                                            <TableCell className="text-md">$2150</TableCell>
+                                        </TableRow>
+                                        <TableRow key="3"> 
+                                            <TableCell className="text-md">8ft x 10ft</TableCell>
+                                            <TableCell className="text-md">$2490</TableCell>
+                                        </TableRow>
+                                        <TableRow key="4"> 
+                                            <TableCell className="text-md">8ft x 12ft</TableCell>
+                                            <TableCell className="text-md">$2790</TableCell>
+                                        </TableRow>
+                                        <TableRow key="5"> 
+                                            <TableCell className="text-md">10ft x 10ft</TableCell>
+                                            <TableCell className="text-md">$2790</TableCell>
+                                        </TableRow>
+                                        <TableRow key="6"> 
+                                            <TableCell className="text-md">10ft x 14ft</TableCell>
+                                            <TableCell className="text-md">$3090</TableCell>
+                                        </TableRow>
+                                        <TableRow key="7"> 
+                                            <TableCell className="text-md">10ft x 16ft</TableCell>
+                                            <TableCell className="text-md">$3690</TableCell>
+                                        </TableRow>
+                                    </TableBody>
+                                </Table>
+                            </AccordionItem>
                         </Accordion>
 
                     </div>
@@ -190,6 +225,10 @@ export default function Home() {
                     <h2 className="mb-4 text-3xl tracking-tight font-semibold text-center text-heading md:text-5xl">Contact Us</h2>
                     {/* <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p> */}
                     <form action="#" className="space-y-8 text-center">
+                        <div>
+                            <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your name</label>
+                            <input type="text" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 block w-full p-2.5 text-md rounded-lg" placeholder="First and last name" required />
+                        </div>
                         <div>
                             <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your email</label>
                             <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 block w-full p-2.5 text-md rounded-lg" placeholder="name@example.com" required />
