@@ -234,12 +234,12 @@ export default function Home() {
                             <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 block w-full p-2.5 text-md rounded-lg" placeholder="name@example.com" required />
                         </div>
                         <div>
-                            <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Subject</label>
-                            <input type="text" id="subject" className="block p-3 w-full text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" placeholder="Let us know how we can help you" required />
+                            <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Phone number</label>
+                            <input type="tel" id="phone" className="block p-3 w-full text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" placeholder="123 456 7890" required />
                         </div>
                         <div className="sm:col-span-2">
                             <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your message</label>
-                            <textarea id="message" rows={6} className="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300" placeholder="Leave a comment..."></textarea>
+                            <textarea id="message" rows={6} className="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300" placeholder="Let us know how we can help you..."></textarea>
                         </div>
                         <Link as={Button} type="submit" color="danger" isBlock className=" text-white px-10 bg-red-700 font-medium rounded-lg text-xl text-center">Message us</Link>
                     </form>
