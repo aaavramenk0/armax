@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, Button, Link, Modal, ModalBody, ModalContent, ModalHeader, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow, useDisclosure } from "@nextui-org/react";
+import { Accordion, AccordionItem, Button, Input, Link, Modal, ModalBody, ModalContent, ModalHeader, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow, useDisclosure } from "@nextui-org/react";
 import NextImage from "next/image";
 import small from "../images/shedCatalog/small1.png"
 import medium from "../images/shedCatalog/medium1.png"
@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faDollarSign, faHouseCircleCheck, faUsers } from "@fortawesome/free-solid-svg-icons";
-import Form from "@/components/Form";
 
 export default function Home() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -49,6 +48,33 @@ export default function Home() {
             icon: faWhatsapp,
             heading: "WhatsApp Us",
             description: "404 416 5745"
+        }
+    ]
+
+    const formInputs = [
+        {
+            type: "text",
+            id: "name",
+            name: "name",
+            placeholder: "First and last name",
+            required: true,
+            label: "Your name"
+        },
+        {
+            type: "email",
+            id: "email",
+            name: "email",
+            placeholder: "name@example.com",
+            required: true,
+            label: "Your email"
+        },
+        {
+            type: "tel",
+            id: "phone",
+            name: "phone",
+            placeholder: "123 456 7890",
+            required: true,
+            label: "Your phone number"
         }
     ]
     
@@ -223,7 +249,38 @@ export default function Home() {
             {/* CONTACT section */}
             <section className="bg-white" id="contact">
                 {/* FORM div */}
-                <Form />
+                <div className="py-5 lg:py-8 px-4 mx-auto max-w-screen-lg">
+                    <h2 className="mb-4 text-3xl tracking-tight font-semibold text-center text-heading md:text-5xl">Contact Us</h2>
+                    <form className="space-y-8 text-center">
+                        {
+                            formInputs.map((input, index) => (
+                                <div key={index}>
+                                    <label htmlFor="name" className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">{input.label}</label>
+                                    <input 
+                                        type={input.type}
+                                        id={input.id}
+                                        name={input.name}
+                                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 block w-full p-2.5 text-md rounded-lg"
+                                        placeholder={input.placeholder}
+                                        required={input.required}
+                                    />
+                                </div>
+                            ))
+                        }
+                        <div className="sm:col-span-2">
+                            <label htmlFor="message" className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows={6}
+                                className="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300"
+                                placeholder="Let us know how we can help you..."
+                            />
+                        </div>
+                        <Button color="danger" type="submit" className="text-white px-10 bg-red-700 font-medium rounded-lg text-xl text-center"> Message us </Button>
+                    </form>
+                </div>
+                
 
                 <div className="max-w-screen-lg mb-4 md:flex md:justify-around md:align-middle md:m-auto md:mb-6 text-center">
                     {socialLinks.map((link, index) => (
