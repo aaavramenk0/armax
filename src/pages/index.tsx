@@ -8,9 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faDollarSign, faHouseCircleCheck, faUsers } from "@fortawesome/free-solid-svg-icons";
-import emailjs from '@emailjs/browser';
-import { error } from "console";
-import { useRef } from "react";
+import Form from "@/components/Form";
 
 export default function Home() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -53,31 +51,6 @@ export default function Home() {
             description: "404 416 5745"
         }
     ]
-
-    const templateParams = {
-        clientName: 'Jack',
-        clientEmail: 'example@gmail.com',
-        clientPhone: '1234567890',
-        clientMessage: 'I would like to book a shed'
-    }
-    const sendEmail = (e: any) => {
-        e.preventDefault();
-
-        emailjs
-            .send('service_60d2ovq', 'template_1v08ovx', templateParams, {
-                publicKey: 'c3wYcruUL-Jeg_u2d'
-            })
-            .then(
-                (response) => {
-                    e.preventDefault();
-                    console.log('SUCCESS!', response.status, response.text);
-                },
-                (error) => {
-                    e.preventDefault();
-                    console.log('FAILED...', error);
-                }
-            )
-    }
     
     return (
         <div>
@@ -86,7 +59,7 @@ export default function Home() {
                 <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:pt-16 lg:pb-5 lg:grid-cols-12 ">
                 {/* <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-16 xl:gap-0 lg:py-16 lg:grid-cols-12 bg-primary-300"> */}
                     <div className="mr-auto place-self-center lg:col-span-6 xl:col-span-7">
-                        <h1 className="max-w-2xl mb-4 text-4xl text-heading font-semibold tracking-tight leading-none md:text-6xl">Welcome to the world of comfy and stylish sheds!</h1>
+                        <h1 className="max-w-2xl mb-4 text-4xl text-heading font-semibold tracking-tight leading-none md:text-6xl">Welcome to the world of sheds!</h1>
                         <p className="max-w-2xl mb-6 text-lg text-subheading lg:mb-8 md:text-xl lg:text-2xl">Don't overpay - Make the right decision by choosing us and get your shed ready to use with the lowest price</p> <p className="hidden">Shed should be ready to use</p>
                         
                         <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-10 py-5 text-xl text-center font-semibold text-white rounded-lg bg-red-700 md:text-2xl md:px-10 md:py-8">Message us</Button>
@@ -249,29 +222,8 @@ export default function Home() {
 
             {/* CONTACT section */}
             <section className="bg-white" id="contact">
-                <div className="py-5 lg:py-8 px-4 mx-auto max-w-screen-lg">
-                    <h2 className="mb-4 text-3xl tracking-tight font-semibold text-center text-heading md:text-5xl">Contact Us</h2>
-                    {/* <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p> */}
-                    <form action="#" className="space-y-8 text-center">
-                        <div>
-                            <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your name</label>
-                            <input type="text" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 block w-full p-2.5 text-md rounded-lg" placeholder="First and last name" required />
-                        </div>
-                        <div>
-                            <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your email</label>
-                            <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 block w-full p-2.5 text-md rounded-lg" placeholder="name@example.com" required />
-                        </div>
-                        <div>
-                            <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Phone number</label>
-                            <input type="tel" id="phone" className="block p-3 w-full text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" placeholder="123 456 7890" required />
-                        </div>
-                        <div className="sm:col-span-2">
-                            <label className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your message</label>
-                            <textarea id="message" rows={6} className="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300" placeholder="Let us know how we can help you..."></textarea>
-                        </div>
-                        <Link as={Button} type="submit" onSubmit={sendEmail} color="danger" isBlock className=" text-white px-10 bg-red-700 font-medium rounded-lg text-xl text-center">Message us</Link>
-                    </form>
-                </div>
+                {/* FORM div */}
+                <Form />
 
                 <div className="max-w-screen-lg mb-4 md:flex md:justify-around md:align-middle md:m-auto md:mb-6 text-center">
                     {socialLinks.map((link, index) => (
