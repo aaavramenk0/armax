@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faDollarSign, faHouseCircleCheck, faUsers } from "@fortawesome/free-solid-svg-icons";
+import Form from "@/components/Form";
 
 export default function Home() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -50,33 +51,6 @@ export default function Home() {
             description: "404 416 5745"
         }
     ]
-
-    const formInputs = [
-        {
-            type: "text",
-            id: "name",
-            name: "name",
-            placeholder: "First and last name",
-            required: true,
-            label: "Your name"
-        },
-        {
-            type: "email",
-            id: "email",
-            name: "email",
-            placeholder: "name@example.com",
-            required: true,
-            label: "Your email"
-        },
-        {
-            type: "tel",
-            id: "phone",
-            name: "phone",
-            placeholder: "123 456 7890",
-            required: true,
-            label: "Your phone number"
-        }
-    ]
     
     return (
         <div>
@@ -88,7 +62,7 @@ export default function Home() {
                         <h1 className="max-w-2xl mb-4 text-4xl text-heading font-semibold tracking-tight leading-none md:text-6xl">Welcome to the world of sheds!</h1>
                         <p className="max-w-2xl mb-6 text-lg text-subheading lg:mb-8 md:text-xl lg:text-2xl">Don't overpay - Make the right decision by choosing us and get your shed ready to use with the lowest price</p> <p className="hidden">Shed should be ready to use</p>
                         
-                        <Button as={Link} onPress={onOpen} href="#" className="m-auto inline-flex items-center justify-center px-10 py-5 text-xl text-center font-semibold text-white rounded-lg bg-red-700 md:text-2xl md:px-10 md:py-8">Message us</Button>
+                        <Button as={Link} onPress={onOpen} className="m-auto inline-flex items-center justify-center px-10 py-5 text-xl text-center font-semibold text-white rounded-lg bg-red-700 md:text-2xl md:px-10 md:py-8">Message us</Button>
                     </div>   
                     <div className="hidden lg:mt-0 lg:col-span-6 xl:col-span-5 lg:flex">
                         <NextImage src={heroImage} alt="Shed image" className="rounded-xl"/>
@@ -132,7 +106,7 @@ export default function Home() {
                                         <span>Free maintenance services</span>
                                     </li>
                                 </ul>
-                                <Button as={Link} onPress={onOpen} href="#" className="text-white bg-red-700 font-medium rounded-lg text-xl px-3 py-2 text-center mt-auto">Message us</Button>
+                                <Button as={Link} onPress={onOpen} className="text-white bg-red-700 font-medium rounded-lg text-xl px-3 py-2 text-center mt-auto">Message us</Button>
                             </div>
                         ))}
                     </div>
@@ -172,7 +146,7 @@ export default function Home() {
                     <div className="text-center py-10 px-5 my-10 border border-grey-200 shadow  rounded-lg">
                         <h2 className="mb-4 text-4xl tracking-tight font-semibold text-heading md:text-5xl">Get your <span className="text-red-700 font-small-caps">FREE</span> shed estimate today!</h2>
                         <p className="text-subheading text-lg sm:text-xl  lg:text-2xl">Experience quality and style with our durable sheds. Perfect for storage, work, or relaxation. Join our community of happy customers. Make the most of your backyard today!</p> 
-                        <Link as={Button} onPress={onOpen} type="submit" color="danger" isBlock className="text-md text-white px-10 bg-red-700 font-medium rounded-lg md:text-2xl md:px-10 md:py-8 text-center m-auto mt-5 ">Message us</Link>
+                        <Link as={Button} onPress={onOpen} type="submit" color="danger" isBlock className="text-md text-white px-10 bg-red-700 font-medium rounded-lg md:text-2xl md:px-10 md:py-8 text-center m-auto mt-5">Message us</Link>
                     </div>
                 </div>
             </section>
@@ -249,38 +223,7 @@ export default function Home() {
             {/* CONTACT section */}
             <section className="bg-white" id="contact">
                 {/* FORM div */}
-                <div className="py-5 lg:py-8 px-4 mx-auto max-w-screen-lg">
-                    <h2 className="mb-4 text-3xl tracking-tight font-semibold text-center text-heading md:text-5xl">Contact Us</h2>
-                    <form className="space-y-8 text-center">
-                        {
-                            formInputs.map((input, index) => (
-                                <div key={index}>
-                                    <label htmlFor="name" className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">{input.label}</label>
-                                    <input 
-                                        type={input.type}
-                                        id={input.id}
-                                        name={input.name}
-                                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 block w-full p-2.5 text-md rounded-lg"
-                                        placeholder={input.placeholder}
-                                        required={input.required}
-                                    />
-                                </div>
-                            ))
-                        }
-                        <div className="sm:col-span-2">
-                            <label htmlFor="message" className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your message</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows={6}
-                                className="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300"
-                                placeholder="Let us know how we can help you..."
-                            />
-                        </div>
-                        <Button color="danger" type="submit" className="text-white px-10 bg-red-700 font-medium rounded-lg text-xl text-center"> Message us </Button>
-                    </form>
-                </div>
-                
+                <Form />
 
                 <div className="max-w-screen-lg mb-4 md:flex md:justify-around md:align-middle md:m-auto md:mb-6 text-center">
                     {socialLinks.map((link, index) => (
