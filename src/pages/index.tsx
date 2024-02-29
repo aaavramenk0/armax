@@ -120,7 +120,7 @@ export default function Home() {
                         <h2 className="mb-4 text-3xl tracking-tight font-semibold text-heading md:text-5xl">ArMax Renovation - We are building trust, not only sheds</h2>
                         <p className="text-subheading text-lg lg:text-2xl">Our mission is to inspire our customers by making your life more comfy and better. We always serve every customer in the unique way. We guarantee quality out products and provide complementary maintenance</p>
                     </div>
-                    <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                    <div className="space-y-8 md:grid md:grid-cols-2  md:gap-12 md:space-y-0">
                         <div>
                             <div className="flex justify-center mx-auto items-center mb-4 w-20 h-20 rounded-full bg-red-200">
                                 <FontAwesomeIcon icon={faHouseCircleCheck} className="fa-2x" />    
@@ -135,13 +135,52 @@ export default function Home() {
                             <h3 className="mb-2 text-2xl font-semibold text-center">Committed to Quality and Affordability</h3>
                             <p className="text-subheading text-lg">Understanding the value of your hard-earned money, we provide comprehensive services that include not only the construction of your new shed but also ongoing maintenance and the flexibility of moving your shed within your backyard</p>
                         </div>
-                        <div>
+                        {/* <div>
                             <div className="flex justify-center mx-auto items-center mb-4 w-20 h-20 rounded-full bg-red-200">
                                 <FontAwesomeIcon icon={faUsers} className="fa-2x" />    
                             </div>
                             <h3 className="mb-2 text-2xl font-semibold text-center">A Guarantee of Excellence: Our 3-Year Warranty</h3>
                             <p className="text-subdheading text-lg">We stand proudly behind our work. This commitment is exemplified by our 3-year warranty on all our products and services. It's not just a warranty - it's a promise of our dedication to excellence and your satisfaction</p>
-                        </div>
+                        </div> */}
+                    </div>
+                    <div className="mt-12" id="sizes">
+                        <h2 className="mb-7 text-3xl font-semibold tracking-tight text-heading md:text-5xl lg:text-center">Shed Sizes</h2>
+                        <Table isStriped aria-label="Shed sizes and price table">
+                            <TableHeader>
+                                <TableColumn className="text-md xl:text-xl bg-red-200 text-heading"> SIZE </TableColumn>
+                                <TableColumn className="text-md xl:text-xl bg-red-200 text-heading"> PRICE </TableColumn>
+                            </TableHeader>
+                            <TableBody>
+                                <TableRow key="1"> 
+                                    <TableCell className="text-md xl:text-xl">6ft x 8ft</TableCell>
+                                    <TableCell className="text-md xl:text-xl">$1850</TableCell>
+                                </TableRow>
+                                <TableRow key="2"> 
+                                    <TableCell className="text-md xl:text-xl">8ft x 8ft</TableCell>
+                                    <TableCell className="text-md xl:text-xl">$2150</TableCell>
+                                </TableRow>
+                                <TableRow key="3"> 
+                                    <TableCell className="text-md xl:text-xl">8ft x 10ft</TableCell>
+                                    <TableCell className="text-md xl:text-xl">$2490</TableCell>
+                                </TableRow>
+                                <TableRow key="4"> 
+                                    <TableCell className="text-md xl:text-xl">8ft x 12ft</TableCell>
+                                    <TableCell className="text-md xl:text-xl">$2790</TableCell>
+                                </TableRow>
+                                <TableRow key="5"> 
+                                    <TableCell className="text-md xl:text-xl">10ft x 10ft</TableCell>
+                                    <TableCell className="text-md xl:text-xl">$2790</TableCell>
+                                </TableRow>
+                                <TableRow key="6"> 
+                                    <TableCell className="text-md xl:text-xl">10ft x 14ft</TableCell>
+                                    <TableCell className="text-md xl:text-xl">$3090</TableCell>
+                                </TableRow>
+                                <TableRow key="7"> 
+                                    <TableCell className="text-md xl:text-xl">10ft x 16ft</TableCell>
+                                    <TableCell className="text-md xl:text-xl">$3690</TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
                     </div>
                     <div className="text-center py-10 px-5 my-10 border border-grey-200 shadow  rounded-lg">
                         <h2 className="mb-4 text-4xl tracking-tight font-semibold text-heading md:text-5xl">Get your <span className="text-red-700 font-small-caps">FREE</span> shed estimate today!</h2>
