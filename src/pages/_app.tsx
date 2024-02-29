@@ -27,8 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
           <meta name="author" content="ArMax Renovation LLC" />
           <meta name="robots" content="index, follow" />
           <meta name="language" content="English" />
-          <meta name="revisit-after" content="7 days" />
+          <meta name="revisit-after" content="1 day" />
           <meta name="application-name" content="Shed Construction" />
+          <meta name='canonical' content='www.shed-construction.com'/>
         </Head>
         <NextUIProvider>
             <RootLayout >
