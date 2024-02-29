@@ -133,7 +133,7 @@ export default function Home() {
                                 <FontAwesomeIcon icon={faDollarSign} className="fa-2x" />    
                             </div>
                             <h3 className="mb-2 text-2xl font-semibold text-center">Committed to Quality and Affordability</h3>
-                            <p className="text-subheading text-lg">Understanding the value of your hard-earned money, we provide comprehensive services that include not only the construction of your new shed but also ongoing maintenance and the flexibility of moving your shed within your backyard</p>
+                            <p className="text-subheading text-lg">The commitment to quality and affordability in shed construction is evident through the use of high quality materials and careful construction to ensure the structure is durable and long lasting. At the same time, attention is paid to the availability of materials and technologies to make the construction of sheds accessible to a wide range of people, without compromising quality and safety.</p>
                         </div>
                         {/* <div>
                             <div className="flex justify-center mx-auto items-center mb-4 w-20 h-20 rounded-full bg-red-200">
