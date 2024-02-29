@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
           
         {/* SEO */}
           <meta name="description" content="ArMax Renovation LLC specializes in high-quality, affordable shed construction and installation services with a 3-year warranty. Explore our range of durable, weather-resistant sheds perfect for any outdoor space" />
-          <meta name="keywords" content="Shed Construction, Affordable Sheds, Quality Sheds, Custom Sheds, Weather-Resistant Sheds, Garden Sheds, Outdoor Storage, Shed Builders, Shed Installation, Shed Warranty, Shed Construction, Shed Construction Company, Shed Construction Company in Georgia, Shed Construction Company in Atlanta, Sheds in Atlanta, Sheds in Georgia, Back offices in Georgia, Shed Construction Company near me" />
+          <meta name="keywords" content="Shed Construction, Affordable Sheds, Quality Sheds, Custom Sheds, Weather-Resistant Sheds, Garden Sheds, Outdoor Storage, Shed Builders, Shed Installation, Shed Warranty, Shed Construction, Shed Construction Company, Shed Construction Company in Georgia, Shed Construction Company in Atlanta, Sheds in Atlanta, Sheds in Georgia, Back offices in Georgia, Shed Construction Company near me, ArMax Renovation LLC" />
           <meta name="author" content="ArMax Renovation LLC" />
           <meta name="robots" content="index, follow" />
           <meta name="language" content="English" />
