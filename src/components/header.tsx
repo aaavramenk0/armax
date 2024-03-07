@@ -13,12 +13,12 @@ export default function Header() {
     }
 
     const menuItems = [
-        { label: "Головна", href: "#home" },
-        { label: "Каталог", href: "#sheds" },
-        { label: "Про нас", href: "#about" },
-        { label: "Ціни", href: "#sizes" },
-        { label: "Поширені питання", href: "#faq" },
-        { label: "Контакти", href: "#contact" }
+        { label: "Home", href: "#home" },
+        { label: "Shed catalog", href: "#sheds" },
+        { label: "About us", href: "#about" },
+        { label: "Pricing", href: "#sizes" },
+        { label: "FAQ", href: "#faq" },
+        { label: "Contact us", href: "#contact" }
     ]
     
     return (
@@ -26,7 +26,7 @@ export default function Header() {
             <NavbarContent className="lg:hidden" justify="center">
                 <NavbarBrand>
                     <NextImage src={logo} width={48} alt="Logo of the company" />
-                    <Link href="#home" color="foreground"><span className="font-semibold text-[26px] pl-2 xxs:text-[14px] xs:text-[22px]">Sheds For Everyone</span></Link>
+                    <Link href="#home" color="foreground"><span className="font-semibold text-[26px] pl-2 xxs:text-[14px] xs:text-[22px]">Shed Construction</span></Link>
                 </NavbarBrand>
             </NavbarContent>
             <NavbarContent className="lg:hidden" justify="end">
@@ -36,7 +36,7 @@ export default function Header() {
             <NavbarContent className="hidden lg:flex gap-8" justify="center">
                 <NavbarBrand>
                     <NextImage src={logo} width={48} alt="Logo of the company" />
-                    <Link href="#home" color="foreground"><span className="font-bold lg:text-red-500 text-xl pl-3">Sheds For Everyone</span></Link>
+                    <Link href="#home" color="foreground"><span className="font-bold lg:text-red-500 text-xl pl-3">Shed Construction</span></Link>
                 </NavbarBrand>
             </NavbarContent>
 
