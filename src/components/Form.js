@@ -79,7 +79,11 @@ const Form = () => {
                         />
                     </div>
                     <div>
+<<<<<<< HEAD
                         <label htmlFor="phone" className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Ваш номер телефону</label>
+=======
+                        <label htmlFor="phone" className="block mb-2 text-lg font-medium text-gray-900 text-left lg:text-xl">Your phone number</label>
+>>>>>>> 70b33b7ed46dfa131637ee3e15461f15fa3b876e
                         <input    
                             type='tel'
                             id='phone'
