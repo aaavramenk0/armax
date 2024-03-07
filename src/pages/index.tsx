@@ -117,7 +117,7 @@ export default function Home() {
             <section className="bg-white" id="about">
                 <div className="pt-8 px-4 mx-auto max-w-screen-xl">
                     <div className="max-w-screen-lg mb-8">
-                        <h2 className="mb-4 text-3xl tracking-tight font-semibold text-heading md:text-5xl">We are building trust, not only sheds</h2>
+                        <h2 className="mb-4 text-3xl tracking-tight font-semibold text-heading md:text-5xl">We are building trust, not only sheds </h2>
                         <p className="text-subheading text-lg lg:text-2xl">Our mission is to inspire our customers by making your life more comfy and better. We always uniquely serve every customer. We guarantee the quality of products and provide complimentary maintenance</p>
                     </div>
                     <div className="space-y-8 md:grid md:grid-cols-2  md:gap-12 md:space-y-0">
